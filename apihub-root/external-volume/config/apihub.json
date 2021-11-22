@@ -1,0 +1,42 @@
+{
+  "storage": "../apihub-root",
+  "port": 8080,
+  "preventRateLimit": true,
+  "activeComponents": [
+    "virtualMQ",
+    "messaging",
+    "notifications",
+    "filesManager",
+    "bdns",
+    "bricksLedger",
+    "bricksFabric",
+    "bricking",
+    "anchoring",
+    "dsu-wizard",
+    "staticServer"
+  ],
+  "componentsConfig": {
+    "bricking": {},
+    "anchoring": {}
+  },
+  "enableRequestLogger": true,
+  "enableJWTAuthorisation": false,
+  "enableLocalhostAuthorization": false,
+  "skipJWTAuthorisation": [
+    "/directory-summary",
+    "/resources",
+    "/bdns",
+    "/anchor/default",
+    "/anchor/vault",
+    "/bricking",
+    "/bricksFabric",
+    "/bricksledger",
+    "/create-channel",
+    "/forward-zeromq",
+    "/send-message",
+    "/receive-message",
+    "/files",
+    "/notifications",
+    "/mq"
+  ]
+}
