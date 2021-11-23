@@ -1,2 +1,2 @@
-// @ts-ignore
-export {opendsu} from "../../../dsu-blueprint/src";
+
+export const a  = "asdfa"
