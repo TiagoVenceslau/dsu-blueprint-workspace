@@ -39,7 +39,38 @@
           "cmd": "cd dsu-blueprint && npm install"
         }
       ]
+    },
+    {
+      "name": "demo-repositories",
+      "src": ".",
+      "actions": [
+        {
+          "type": "execute",
+          "cmd": "cd demo-repositories && npm install"
+        }
+      ]
     }
   ],
-  "build": []
+  "build": [
+    {
+      "name": "build dsu-blueprint",
+      "src": ".",
+      "actions": [
+        {
+          "type": "execute",
+          "cmd": "cd dsu-blueprint && npm run build"
+        }
+      ]
+    },
+    {
+      "name": "build demo-repositories",
+      "src": ".",
+      "actions": [
+        {
+          "type": "execute",
+          "cmd": "cd demo-repositories && npm run build"
+        }
+      ]
+    }
+  ]
 }
