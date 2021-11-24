@@ -15,7 +15,7 @@
     "server": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"cd privatesky && npm run start\"",
     "switch-to-release": "npm run remove privatesky && npm run add privatesky http://github.com/privatesky/psk-release.git 0",
     "switch-to-dev": "npm run remove privatesky && npm run add privatesky http://github.com/privatesky/privatesky.git 0",
-    "test": "cd ./tests/unit-tests && node ../../privatesky/scripts/testrunner.js --directory=./tests",
+    "test": "cd ./tests && node ../privatesky/scripts/testrunner.js --directory=./tests",
     "coverage": "./node_modules/.bin/istanbul cover node ./privatesky/scripts/testrunner.js --directory=./tests",
     "clean": "node ./bin/clean.js ./",
     "clean-build": "npm run clean && npm run build privatesky && npm run build-all",

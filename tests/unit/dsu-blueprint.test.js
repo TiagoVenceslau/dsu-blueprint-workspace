@@ -5,13 +5,16 @@ process.env.PSK_CONFIG_LOCATION = process.cwd();
 
 const path = require('path');
 
+const dsuBlueprint = require('../../dsu-blueprint/lib');
+
 const test_bundles_path = path.join('../../privatesky/psknode/bundles', 'testsRuntime.js');
 require(test_bundles_path);
-const {argParser} = require('../../../bin/environment/utils');
 
 const dc = require("double-check");
 const assert = dc.assert;
 const tir = require("../../privatesky/psknode/tests/util/tir");
+
+const {argParser, SeedDSU, SeedDSURepository} = dsuBlueprint;
 
 let domain = 'default';
 let testName = 'dsu-blueprint' // no spaces please. its used as a folder name
@@ -43,53 +46,33 @@ const getBDNSConfig = function(folder){
 }
 
 const defaultOps = {
-    timeout: 250000,
+    timeout: 100000,
     fakeServer: true,
     useCallback: true
 }
 
 const TEST_CONF = argParser(defaultOps, process.argv);
 
-const wizard = require('../../../fgt-dsu-wizard');
-const {Services, Model} = wizard;
+const testSeedDSU = function(callback){
+    const seedDSU = new SeedDSU();
+    const errs = seedDSU.hasErrors();
 
-
-const getItem = function(){
-    return {};
-}
-
-const testCreate = function(item, itemService, callback){
-    console.log(`Trying to create item`);
-}
-
-const testGet = function(keySSI, item, itemService, callback){
-    console.log(`Trying to read product from SSI: ${keySSI.getIdentifier()}`);
-}
-
-const testUpdate = function(keySSI, item, itemService, callback){
-    console.log(`Trying to update product from SSI: ${keySSI.getIdentifier()}`);
-}
-
-
-
-const runTest = function(callback){
-
-    const itemService = {}
-    const object = {};
-
-    testCreate(object, itemService, (err, keySSI) => {
+    assert.true(errs === undefined, "SeedDSU shows errors");
+    const repo = new SeedDSURepository();
+    repo.create(seedDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
-        testGet(keySSI, object, itemService, (err, itemFromSSI) => {
-            if (err)
-                return callback(err);
-            testUpdate(keySSI, itemFromSSI, itemService, (err) => {
-                if (err)
-                    return callback(err);
-                callback();
-            });
-        });
-    });
+        assert.true(newModel !== undefined, "Updated Model is undefined");
+        assert.true(dsu !== undefined, "DSU is undefined");
+        assert.true(keySSI !== undefined, "KeySSI is undefined");
+        callback();
+    })
+}
+
+const runTest = function(callback){
+    assert.true(dsuBlueprint.getOpenDSU() !== undefined, "OpenDSU cannot be found");
+    testSeedDSU(callback);
+    // callback();
 }
 
 const testFinishCallback = function(callback){

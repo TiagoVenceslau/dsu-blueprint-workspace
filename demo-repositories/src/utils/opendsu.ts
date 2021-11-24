@@ -1,2 +1,2 @@
 
-export const a  = "asdfa"
+export {opendsu} from '../../../dsu-blueprint/lib/index';
