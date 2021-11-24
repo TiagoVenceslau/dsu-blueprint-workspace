@@ -1,4 +1,4 @@
-//process.exit(0) // ignore the template in tests....
+process.exit(0) // ignore the template in tests....
 
 process.env.NO_LOGS = true;
 process.env.PSK_CONFIG_LOCATION = process.cwd();
@@ -14,10 +14,10 @@ const dc = require("double-check");
 const assert = dc.assert;
 const tir = require("../../privatesky/psknode/tests/util/tir");
 
-const {argParser, SeedDSU, ArrayDSU, WalletDSU, KeySSIType, SeedDSURepository, ArrayDSURepository, WalletDSURepository} = dsuBlueprint;
+const {argParser, WalletDSU, KeySSIType, WalletDSURepository} = dsuBlueprint;
 
 let domain = 'default';
-let testName = 'dsu-blueprint' // no spaces please. its used as a folder name
+let testName = 'dsu-blueprint-WalletDSU' // no spaces please. its used as a folder name
 
 const DOMAIN_CONFIG = {
     anchoring: {
@@ -53,44 +53,6 @@ const defaultOps = {
 
 const TEST_CONF = argParser(defaultOps, process.argv);
 
-const testSeedDSU = function(callback){
-    const seedDSU = new SeedDSU();
-    const errs = seedDSU.hasErrors();
-
-    assert.true(errs === undefined, "SeedDSU shows errors");
-    const repo = new SeedDSURepository();
-    repo.create(seedDSU, (err, newModel, dsu, keySSI) => {
-        if (err)
-            return callback(err);
-        assert.true(newModel !== undefined, "Updated Model is undefined");
-        assert.true(dsu !== undefined, "DSU is undefined");
-        assert.true(keySSI !== undefined, "KeySSI is undefined");
-        assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
-        assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
-        callback();
-    })
-}
-
-const testArrayDSU = function(callback){
-    const arrayDSU = new ArrayDSU();
-    const errs = arrayDSU.hasErrors();
-
-    assert.true(errs === undefined, "ArrayDSU shows errors");
-    const repo = new ArrayDSURepository();
-    const extraKeyArgs = [Math.floor(Math.random() * 1000).toString(), Math.floor(Math.random() * 10000).toString()]
-
-    repo.create(arrayDSU, ...extraKeyArgs, (err, newModel, dsu, keySSI) => {
-        if (err)
-            return callback(err);
-        assert.true(newModel !== undefined, "Updated Model is undefined");
-        assert.true(dsu !== undefined, "DSU is undefined");
-        assert.true(keySSI !== undefined, "KeySSI is undefined");
-        assert.true(keySSI.getTypeName() === KeySSIType.ARRAY, 'KeySSI is of different type');
-        assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
-        callback();
-    })
-}
-
 const testWalletDSU = function(callback){
     // TODO: Needs working SSApp
     const walletDSU = new WalletDSU();
@@ -109,16 +71,12 @@ const testWalletDSU = function(callback){
         assert.true(keySSI.getTypeName() === KeySSIType.WALLET, 'KeySSI is of different type');
         assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
         callback();
-    })
+    });
 }
 
 const runTest = function(callback){
     assert.true(dsuBlueprint.getOpenDSU() !== undefined, "OpenDSU cannot be found");
-    testSeedDSU(err => {
-        if (err)
-            return callback(err);
-        testArrayDSU(callback);
-    });
+    testWalletDSU(callback);
 }
 
 const testFinishCallback = function(callback){
