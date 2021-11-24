@@ -14,7 +14,7 @@ const dc = require("double-check");
 const assert = dc.assert;
 const tir = require("../../privatesky/psknode/tests/util/tir");
 
-const {argParser, SeedDSU, SeedDSURepository} = dsuBlueprint;
+const {argParser, SeedDSU, ArrayDSU, WalletDSU, KeySSIType, SeedDSURepository, ArrayDSURepository, WalletDSURepository} = dsuBlueprint;
 
 let domain = 'default';
 let testName = 'dsu-blueprint' // no spaces please. its used as a folder name
@@ -65,14 +65,60 @@ const testSeedDSU = function(callback){
         assert.true(newModel !== undefined, "Updated Model is undefined");
         assert.true(dsu !== undefined, "DSU is undefined");
         assert.true(keySSI !== undefined, "KeySSI is undefined");
+        assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
+        assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+        callback();
+    })
+}
+
+const testArrayDSU = function(callback){
+    const arrayDSU = new ArrayDSU();
+    const errs = arrayDSU.hasErrors();
+
+    assert.true(errs === undefined, "ArrayDSU shows errors");
+    const repo = new ArrayDSURepository();
+    const extraKeyArgs = [Math.floor(Math.random() * 1000).toString(), Math.floor(Math.random() * 10000).toString()]
+
+    repo.create(arrayDSU, ...extraKeyArgs, (err, newModel, dsu, keySSI) => {
+        if (err)
+            return callback(err);
+        assert.true(newModel !== undefined, "Updated Model is undefined");
+        assert.true(dsu !== undefined, "DSU is undefined");
+        assert.true(keySSI !== undefined, "KeySSI is undefined");
+        assert.true(keySSI.getTypeName() === KeySSIType.ARRAY, 'KeySSI is of different type');
+        assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+        callback();
+    })
+}
+
+const testWalletDSU = function(callback){
+    // TODO: Needs working SSApp
+    const walletDSU = new WalletDSU();
+    const errs = walletDSU.hasErrors();
+
+    assert.true(errs === undefined, "ArrayDSU shows errors");
+    const repo = new WalletDSURepository();
+    const extraKeyArgs = [Math.floor(Math.random() * 1000).toString(), Math.floor(Math.random() * 10000).toString()]
+
+    repo.create(walletDSU, ...extraKeyArgs, (err, newModel, dsu, keySSI) => {
+        if (err)
+            return callback(err);
+        assert.true(newModel !== undefined, "Updated Model is undefined");
+        assert.true(dsu !== undefined, "DSU is undefined");
+        assert.true(keySSI !== undefined, "KeySSI is undefined");
+        assert.true(keySSI.getTypeName() === KeySSIType.WALLET, 'KeySSI is of different type');
+        assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
         callback();
     })
 }
 
 const runTest = function(callback){
     assert.true(dsuBlueprint.getOpenDSU() !== undefined, "OpenDSU cannot be found");
-    testSeedDSU(callback);
-    // callback();
+    testSeedDSU(err => {
+        if (err)
+            return callback(err);
+        testArrayDSU(callback);
+    });
 }
 
 const testFinishCallback = function(callback){
@@ -87,8 +133,10 @@ const testFinishCallback = function(callback){
 const launchTest = function(callback){
     const testRunner = function(callback){
         runTest((err) => {
-            if (err)
-                return callback(err);
+            if (err){
+                console.error(err);
+                process.exit(1)
+            }
             testFinishCallback(callback);
         });
     }
