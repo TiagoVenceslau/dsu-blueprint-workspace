@@ -1,9 +1,9 @@
 // @ts-ignore
-import {DSU, DSUModel} from "../../../dsu-blueprint/src";
+import {DSUModel, DSUModel} from "../../../dsu-blueprint/src";
 import {constructFromObject, DBOperations, readonly, timestamp} from "@tvenceslau/db-decorators/lib";
 import {maxlength, minlength, required} from "@tvenceslau/decorator-validation/lib";
 
-@DSU("default")
+@DSUModel("default")
 export class SeedDSUModel extends DSUModel{
 
     @required()

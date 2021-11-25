@@ -1,9 +1,9 @@
 // @ts-ignore
-import {DSU, DSUModel, KeySSIType} from "../../../dsu-blueprint/src";
+import {DSUModel, DSUModel, KeySSIType} from "../../../dsu-blueprint/src";
 import {constructFromObject, DBOperations, readonly, timestamp} from "@tvenceslau/db-decorators/lib";
 import {maxlength, minlength, required} from "@tvenceslau/decorator-validation/lib";
 
-@DSU("default", KeySSIType.ARRAY,undefined, true, "name", "createdOn")
+@DSUModel("default", KeySSIType.ARRAY,undefined, true, "name", "createdOn")
 export class ArrayDSUModel extends DSUModel{
 
     @required()

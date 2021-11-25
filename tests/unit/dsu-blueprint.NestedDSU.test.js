@@ -47,7 +47,7 @@ const getBDNSConfig = function(folder){
 }
 
 const defaultOps = {
-    timeout: 100000,
+    timeout: 5000,
     fakeServer: true,
     useCallback: true
 }
