@@ -9,7 +9,7 @@ let domain = 'default';
 let testName = 'DSU Blueprint NESTED';
 
 const defaultOps = {
-    timeout: 10000000,
+    timeout: 1000,
     fakeServer: true,
     useCallback: true
 }
