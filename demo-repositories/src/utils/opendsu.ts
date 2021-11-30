@@ -1,2 +1,1 @@
-// @ts-ignore
-export {getOpenDSU} from '../../../dsu-blueprint/lib';
+export {getOpenDSU} from '@tvenceslau/dsu-blueprint/lib';

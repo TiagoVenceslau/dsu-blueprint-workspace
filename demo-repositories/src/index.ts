@@ -1,5 +1,6 @@
 /**
- * @module dsu-blueprint
+ * @module demo-repositories
  */
 
 export * from './utils';
+export * from './model';

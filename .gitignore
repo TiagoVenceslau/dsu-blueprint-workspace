@@ -3,16 +3,25 @@
 /latest-change-set.txt
 
 /privatesky
+/webcardinal
+/cardinal
+/themes
+/dossier-explorer-ssapp
+/dossier-explorer-wallet-prototype
 
 /apihub-root/seedsBackup
 /apihub-root/messaging
 /apihub-root/notifications
+/apihub-root/dsu-explorer
+
 /apihub-root/external-volume
 !/apihub-root/external-volume/config
 
 /demo-repositories/node_modules
 /demo-repositories/lib
 /demo-repositories/dist
+
+/demo-ssapp/seed
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm+all,vim,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all,vim,node

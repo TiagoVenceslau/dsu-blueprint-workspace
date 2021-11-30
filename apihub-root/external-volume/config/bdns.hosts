@@ -7,7 +7,7 @@
     "anchoringServices": [
       "$ORIGIN"
     ]
-  }
+  },
   "vault": {
     "replicas": [],
     "brickStorages": [
