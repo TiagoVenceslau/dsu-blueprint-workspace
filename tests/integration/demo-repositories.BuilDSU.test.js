@@ -4,10 +4,11 @@ const demoRepositories = require('../../demo-repositories/lib');
 const decValidation = require('../../demo-repositories/node_modules/@tvenceslau/decorator-validation/lib');
 const {isEqual} = decValidation;
 
-const {KeySSIType, OpenDSURepository} = dsuBlueprint;
+const {KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
 const {BuildDsuBlueprint} = demoRepositories;
 
 const {OpenDSUTestRunner} = require('../../bin/TestRunner');
+
 
 let domain = 'default';
 let testName = 'Build DSU Blueprint';
@@ -34,8 +35,32 @@ const testDSUStructure = function(dsu, callback){
         tr.assert.true(data === 'delete /\n' +
             'addfolder code\n' +
             'mount ../cardinal/seed /cardinal\n' +
-            'mount ../themes/*/seed /themes/*');
-        callback();
+            'mount ../themes/*/seed /themes/*', "File contents are wrong");
+
+        dsu.listFolders('/', (err, folders) => {
+            if (err)
+                return callback(err);
+            tr.assert.true(folders && folders.length, "Folder count does not match");
+            tr.assert.true(folders[0] === 'code', "Folder name is wrong");
+
+            dsu.listMountedDSUs('/', (err, mounts) => {
+                if (err)
+                    return callback(err);
+                tr.assert.true(mounts && mounts.length === 2 && mounts[0].path === 'webcardinal', "Cant find webcardinal");
+                tr.assert.true(mounts[1].path = 'themes/blue-fluorite-theme', 'cant find Blue Flourite theme');
+                try{
+                    const cardinalSSI = getKeySsiSpace().parse(mounts[0].identifier);
+                    tr.assert.true(cardinalSSI.getTypeName() === 'sread');
+
+                    const themeSSI = getKeySsiSpace().parse(mounts[1].identifier);
+                    tr.assert.true(themeSSI.getTypeName() === 'sread');
+                } catch (e) {
+                    return callback(e);
+                }
+
+                callback();
+            });
+        });
     });
 }
 
@@ -46,7 +71,7 @@ tr.run((callback) => {
     let errs = buildDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "BuildDSU shows errors");
-    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../dsu-blueprint');
+    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../demo-repositories');
     repo.create(buildDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);

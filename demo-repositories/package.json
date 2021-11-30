@@ -7,8 +7,8 @@
   "scripts": {
     "start:dev": "nodemon",
     "start": "npm run build && node lib/index.js",
-    "build": "rimraf ./lib && tsc",
-    "build:prod": "rimraf ./lib && tsc && npm run minify",
+    "build": "rimraf lib && tsc",
+    "build:prod": "rimraf lib && tsc && npm run minify",
     "minify": "npm install gulp gulp-babel gulp-rename gulp-concat gulp-sourcemaps gulp-typescript gulp-uglify @babel/preset-env && npx gulp && npm uninstall gulp gulp-babel gulp-rename gulp-sourcemaps gulp-typescript gulp-uglify gulp-concat",
     "coverage": "npm test && npm install jest-coverage-badges && jest-coverage-badges --input \"./workdocs/coverage/coverage-summary.json\" --output \"./workdocs/badges\" && npm uninstall jest-coverage-badges",
     "docs": "npm run coverage && npx rimraf ./docs/* && cp -r ./workdocs/assets ./docs/assets && npm install better-docs taffydb && npx markdown-include ./mdCompile.json && npx jsdoc -c jsdocs.json -t ./node_modules/better-docs && cd docs && ./../workdocs/bin/correct_windows_names.sh . && cd .. && npm remove better-docs taffydb"
@@ -46,7 +46,7 @@
     "typescript": "^4.3.5",
     "@tvenceslau/db-decorators": "0.0.14",
     "@tvenceslau/decorator-validation": "1.6.2",
-    "@tvenceslau/dsu-blueprint": "0.0.2"
+    "@tvenceslau/dsu-blueprint": "0.0.4"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13"

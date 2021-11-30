@@ -37,17 +37,17 @@ export class ParticipantDsuBlueprint extends DSUModel{
 @DSUBlueprint(undefined)
 export class BuildDsuBlueprint extends DSUModel{
 
-    @addFileFS("../demo-repositories/bin/init.file", "init.file")
+    @addFileFS("bin/init.file", "init.file")
     init?: any = undefined;
 
-    @addFolderFS('../demo-repositories/lib')
+    @addFolderFS('lib')
     code?: any = undefined;
-    //
-    // @dsuFS("webcardinal", true)
-    // webcardinal?: any = undefined;
-    //
-    // @dsuFS("themes/*", true)
-    // themes?: any[] = undefined;
+
+    @dsuFS("../webcardinal", true)
+    webcardinal?: any = undefined;
+
+    @dsuFS("../themes/*", true)
+    themes?: any[] = undefined;
 
     constructor(blueprint?: BuildDsuBlueprint | {}) {
         super();
