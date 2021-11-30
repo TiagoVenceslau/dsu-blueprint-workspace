@@ -19,7 +19,7 @@
     "coverage": "./node_modules/.bin/istanbul cover node ./privatesky/scripts/testrunner.js --directory=./tests",
     "clean": "node ./bin/clean.js ./",
     "clean-build": "npm run clean && npm run build privatesky && npm run build-all",
-    "freeze": "node ./node_modules/octopus/scripts/freeze dependencies install-mobile",
+    "freeze": "node ./node_modules/octopus/scripts/freeze dependencies",
     "start:dev": "nodemon",
     "start": "npm run build && node lib/index.js",
     "build-inside": "rimraf ./lib && tsc",
