@@ -46,7 +46,7 @@
     "typescript": "^4.3.5",
     "@tvenceslau/db-decorators": "0.0.14",
     "@tvenceslau/decorator-validation": "1.6.2",
-    "@tvenceslau/dsu-blueprint": "0.0.4"
+    "@tvenceslau/dsu-blueprint": "0.0.5"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13"
