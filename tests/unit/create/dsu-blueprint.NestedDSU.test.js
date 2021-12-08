@@ -1,9 +1,9 @@
 
-const dsuBlueprint = require('../../dsu-blueprint/lib');
+const dsuBlueprint = require('../../../dsu-blueprint/lib');
 
-const {DbDsuBlueprint, KeySSIType, DbDSURepository, getKeySsiSpace} = dsuBlueprint;
+const {DbDsuBlueprint, KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
 
-const {OpenDSUTestRunner} = require('../../bin/TestRunner');
+const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
 let testName = 'DSU Blueprint NESTED';
@@ -42,7 +42,7 @@ tr.run((callback) => {
     const errs = dbDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "DbDSU shows errors");
-    const repo = new DbDSURepository();
+    const repo = new OpenDSURepository(DbDsuBlueprint);
     repo.create(dbDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);

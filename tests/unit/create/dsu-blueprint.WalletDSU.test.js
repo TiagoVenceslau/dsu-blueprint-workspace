@@ -1,13 +1,13 @@
 process.exit(0) // TODO: Ignore for now. Needs working SSApp
 
-const dsuBlueprint = require('../../dsu-blueprint/lib');
+const dsuBlueprint = require('../../../dsu-blueprint/lib');
 
-const {WalletDSU, KeySSIType, WalletDSURepository} = dsuBlueprint;
+const {WalletDSU, KeySSIType, OpenDSURepository} = dsuBlueprint;
 
-const {OpenDSUTestRunner} = require('../../bin/TestRunner');
+const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint WALLET' // no spaces please. its used as a folder name
+let testName = 'DSU Blueprint WALLET';
 
 const defaultOps = {
     timeout: 1000,
@@ -24,7 +24,7 @@ tr.run((callback) => {
     const errs = walletDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "WalletDSU shows errors");
-    const repo = new WalletDSURepository();
+    const repo = new OpenDSURepository();
     const extraKeyArgs = [Math.floor(Math.random() * 1000).toString(), Math.floor(Math.random() * 10000).toString()]
 
     repo.create(walletDSU, ...extraKeyArgs, (err, newModel, dsu, keySSI) => {

@@ -1,4 +1,4 @@
-import {constructFromObject, DBOperations, readonly, timestamp} from "@tvenceslau/db-decorators/lib";
+import {constructFromObject, DBOperations, onUpdate, readonly, timestamp} from "@tvenceslau/db-decorators/lib";
 import {maxlength, minlength, required} from "@tvenceslau/decorator-validation/lib";
 import {KeySSIType, DSUModel, DSUBlueprint} from "@tvenceslau/dsu-blueprint/lib";
 

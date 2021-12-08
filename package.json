@@ -51,9 +51,7 @@
   },
   "homepage": "https://github.com/TiagoVenceslau/dsu-blueprint-workspace#readme",
   "devDependencies": {
-    "octopus": "git+https://github.com/PrivateSky/octopus.git",
-    "@types/jest": "^26.0.24",
-    "jest": "^27.0.6"
+    "octopus": "git+https://github.com/PrivateSky/octopus.git"
   },
   "dependencies": {}
 }

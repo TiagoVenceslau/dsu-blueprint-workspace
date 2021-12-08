@@ -44,9 +44,9 @@
     "ts-jest": "^27.0.3",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5",
-    "@tvenceslau/db-decorators": "0.0.14",
+    "@tvenceslau/db-decorators": "0.0.15",
     "@tvenceslau/decorator-validation": "1.6.2",
-    "@tvenceslau/dsu-blueprint": "0.0.5"
+    "@tvenceslau/dsu-blueprint": "0.0.9"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13"

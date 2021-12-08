@@ -1,11 +1,11 @@
-const dsuBlueprint = require('../../dsu-blueprint/lib');
+const dsuBlueprint = require('../../../dsu-blueprint/lib');
 
-const {ArrayDSU, KeySSIType, ArrayDSURepository} = dsuBlueprint;
+const {ArrayDSU, KeySSIType, OpenDSURepository} = dsuBlueprint;
 
-const {OpenDSUTestRunner} = require('../../bin/TestRunner');
+const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint ARRAY' // no spaces please. its used as a folder name
+let testName = 'DSU Blueprint ARRAY';
 
 const defaultOps = {
     timeout: 1000,
@@ -21,8 +21,8 @@ tr.run((callback) => {
     const arrayDSU = new ArrayDSU();
     const errs = arrayDSU.hasErrors();
 
-    tr.assert.true(errs === undefined, "SeedDSU shows errors");
-    const repo = new ArrayDSURepository();
+    tr.assert.true(errs === undefined, "ArrayDSU shows errors");
+    const repo = new OpenDSURepository(ArrayDSU);
     const extraKeyArgs = [Math.floor(Math.random() * 1000).toString(), Math.floor(Math.random() * 10000).toString()]
 
     repo.create(arrayDSU, ...extraKeyArgs, (err, newModel, dsu, keySSI) => {

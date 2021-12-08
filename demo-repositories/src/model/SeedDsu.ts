@@ -1,6 +1,6 @@
 import {DSUBlueprint, DSUModel} from "@tvenceslau/dsu-blueprint/lib";
 import {constructFromObject, DBOperations, readonly, timestamp} from "@tvenceslau/db-decorators/lib";
-import {maxlength, minlength, required} from "@tvenceslau/decorator-validation/lib";
+import {maxlength, minlength, required, max, min} from "@tvenceslau/decorator-validation/lib";
 
 @DSUBlueprint("default")
 export class SeedDSUModel extends DSUModel{
@@ -11,13 +11,17 @@ export class SeedDSUModel extends DSUModel{
     @readonly()
     name?: string = undefined;
 
+    @max(15)
+    @min(1)
+    count?: number = undefined;
+
     @timestamp(DBOperations.CREATE)
     createdOn?: Date = undefined;
 
     @timestamp()
     updatedOn?: Date = undefined;
 
-    constructor(seedDSuModel: SeedDSUModel | {}){
+    constructor(seedDSuModel?: SeedDSUModel | {}){
         super();
         constructFromObject(this, seedDSuModel);
     }
