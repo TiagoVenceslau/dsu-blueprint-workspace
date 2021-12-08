@@ -71,7 +71,7 @@ tr.run((callback) => {
     let errs = buildDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "BuildDSU shows errors");
-    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../demo-repositories');
+    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../dsu-blueprint');
     repo.create(buildDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);

@@ -13,7 +13,7 @@ let domain = 'default';
 let testName = 'DSU Blueprint SEED READ';
 
 const defaultOps = {
-    timeout: 10000000,
+    timeout: 1000,
     fakeServer: true,
     useCallback: true
 }
@@ -45,7 +45,6 @@ tr.run((callback) => {
                 return callback(err || new Error(`No model`));
 
             tr.assert.true(readModel instanceof SeedDSUBlueprint, "Received Model not of same class")
-            readModel.equals(newModel)
             tr.assert.true(readModel.equals(newModel), "Model from create does not match model from read");
             callback();
         })

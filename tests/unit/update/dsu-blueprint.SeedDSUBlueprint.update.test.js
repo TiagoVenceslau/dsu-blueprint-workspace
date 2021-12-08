@@ -1,7 +1,10 @@
 
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
+const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
-const {KeySSIType, OpenDSURepository, SeedDSUModel} = dsuBlueprint;
+
+const {KeySSIType, OpenDSURepository} = dsuBlueprint;
+const {SeedDSUBlueprint} = dsuBlueprintTest;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
@@ -9,17 +12,17 @@ let domain = 'default';
 let testName = 'DSU Blueprint SEED Update';
 
 const defaultOps = {
-    timeout: 10000000,
+    timeout: 1000,
     fakeServer: true,
     useCallback: true
 }
 
 const tr = new OpenDSUTestRunner(testName, domain, defaultOps, undefined, '../');
 
-const NAME = "Testing", COUNT = 5;
+const NAME = "Testiiiing", COUNT = 5;
 
 const validateUpdate = function(originalModel, model, callback){
-    const err = model.hasErrors();
+    const err = model.hasErrors(originalModel);
     if (err)
         return callback(err);
     tr.assert.true(model.name === NAME, "Invalid model Name");
@@ -49,14 +52,14 @@ const validateCreate = function(model, callback){
 tr.run((callback) => {
     tr.assert.true(dsuBlueprint.getOpenDSU() !== undefined, "OpenDSU cannot be found");
 
-    let seedDSU = new SeedDSUModel();
+    let seedDSU = new SeedDSUBlueprint();
 
     let errs = seedDSU.hasErrors();
 
     tr.assert.true(!!errs, "Model is not validating properly");
     tr.assert.true(Object.keys(errs).length === 3, "Model is not validating properly. Invalid number of errors");
 
-    seedDSU = new SeedDSUModel({
+    seedDSU = new SeedDSUBlueprint({
         name: NAME,
         count: COUNT
     })
@@ -66,7 +69,7 @@ tr.run((callback) => {
     tr.assert.true(!!errs, "Model is not validating properly");
     tr.assert.true(Object.keys(errs).length === 2, "Model is not validating properly. Invalid number of errors");
 
-    const repo = new OpenDSURepository(SeedDSUModel);
+    const repo = new OpenDSURepository(SeedDSUBlueprint);
     repo.create(seedDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
@@ -83,16 +86,17 @@ tr.run((callback) => {
 
             newModel.name = NAME + NAME;
 
-            repo.update(keySSI, newModel, (err, newModel1, dsu, keySSI) => {
+            repo.update(keySSI, newModel, (err, newModel1, dsu) => {
                 tr.assert.true(!!err);
 
+                newModel1 = new SeedDSUBlueprint(newModel);
                 newModel1.name = NAME;
                 newModel1.count = 2 * COUNT;
 
-                repo.update(keySSI, newModel1, (err, newModel2, dsu, keySSI) => {
+                repo.update(keySSI, new SeedDSUBlueprint(newModel1), (err, newModel2, dsu) => {
                     if (err)
                         return callback(err);
-                    validateUpdate(newModel, newModel2, (err) => {
+                    validateUpdate(newModel1, newModel2, (err) => {
                         if (err)
                             return callback(err)
                         callback();

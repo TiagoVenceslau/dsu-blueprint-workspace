@@ -13,7 +13,7 @@ let domain = 'default';
 let testName = 'DSU Blueprint SEED';
 
 const defaultOps = {
-    timeout: 1000000,
+    timeout: 1000,
     fakeServer: true,
     useCallback: true
 }
