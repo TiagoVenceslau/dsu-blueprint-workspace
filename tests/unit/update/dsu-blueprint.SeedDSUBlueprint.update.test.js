@@ -41,7 +41,7 @@ const validateCreate = function(model, callback){
     tr.assert.true(model.count === COUNT, 'Invalid model count');
     tr.assert.true(model.createdOn instanceof Date, "Invalid type for created On");
     tr.assert.true(model.updatedOn instanceof Date, "Invalid type for updated On");
-    tr.assert.true(model.updatedOn > model.createdOn, "Timestamp values for updated on should be greater");
+    tr.assert.true(model.updatedOn >= model.createdOn, "Timestamp values for updated on should be greater or equal");
     callback();
 }
 

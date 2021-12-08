@@ -1,9 +1,11 @@
 
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
+const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 const {isEqual} = decValidation;
 
-const {KeySSIType, OpenDSURepository, DsuKeys, IdDsuBlueprint} = dsuBlueprint;
+const {KeySSIType, OpenDSURepository, DsuKeys} = dsuBlueprint;
+const {IdDsuBlueprint} = dsuBlueprintTest;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
@@ -64,6 +66,7 @@ tr.run((callback) => {
         if (err)
             return callback(err);
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");
+        tr.assert.true(newModel instanceof IdDsuBlueprint, "Updated model is not of the same class")
         tr.assert.true(dsu !== undefined, "DSU is undefined");
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
         tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
