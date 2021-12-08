@@ -1,1 +1,0 @@
-export {getOpenDSU} from '@tvenceslau/dsu-blueprint/lib';
