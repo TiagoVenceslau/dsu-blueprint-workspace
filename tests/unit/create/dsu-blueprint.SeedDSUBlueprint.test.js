@@ -85,6 +85,9 @@ tr.run((callback) => {
         tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
         tr.assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
 
+        tr.assert.true(newModel !== seedBlueprint, "Instances are the same after creation")
+        tr.assert.true(newModel.equals(seedBlueprint, "createdOn", "updatedOn"), "Created object static properties are not the same")
+
         errs = newModel.hasErrors();
         tr.assert.true(errs === undefined, "SeedDSUBlueprint shows errors after create");
 
