@@ -28,7 +28,8 @@ tr.run((callback) => {
         if (err)
             return callback(err);
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");
-        tr.assert.true(newModel instanceof SeedDSU, "Updated model is not of the same class")
+        tr.assert.true(newModel instanceof SeedDSU, "Updated model is not of the same class");
+        tr.assert.true(newModel !== seedDSU, "Instances are the same after creation")
         tr.assert.true(dsu !== undefined, "DSU is undefined");
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
         tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');

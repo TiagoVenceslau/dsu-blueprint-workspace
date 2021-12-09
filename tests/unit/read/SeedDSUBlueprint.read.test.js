@@ -47,6 +47,6 @@ tr.run((callback) => {
             tr.assert.true(readModel instanceof SeedDSUBlueprint, "Received Model not of same class")
             tr.assert.true(readModel.equals(newModel), "Model from create does not match model from read");
             callback();
-        })
+        });
     });
 });

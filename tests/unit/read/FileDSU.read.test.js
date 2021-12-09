@@ -10,7 +10,7 @@ const {IdDsuBlueprint} = dsuBlueprintTest;
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint File contents CREATE';
+let testName = 'DSU Blueprint File contents READ';
 
 const defaultOps = {
     timeout: 1000,
@@ -60,18 +60,22 @@ tr.run((callback) => {
     idDSU = new IdDsuBlueprint(data);
     errs = idDSU.hasErrors();
 
-    tr.assert.true(errs === undefined, "IdDSU shows errors");
+    tr.assert.true(!errs, "Model is not validating properly before create");
+
     const repo = new OpenDSURepository(IdDsuBlueprint);
     repo.create(idDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
-        tr.assert.true(newModel !== undefined, "Updated Model is undefined");
-        tr.assert.true(newModel instanceof IdDsuBlueprint, "Updated model is not of the same class");
-        tr.assert.true(newModel !== idDSU, "Instances are the same after creation")
-        tr.assert.true(dsu !== undefined, "DSU is undefined");
-        tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
-        tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
-        tr.assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
-        testDSUStructure(dsu, data, callback);
+        const errs = newModel.hasErrors();
+        tr.assert.true(!errs, "Model is not validating properly after create");
+
+        repo.read(keySSI, (err, readModel) => {
+            if (err || !readModel)
+                return callback(err || new Error(`No model`));
+
+            tr.assert.true(readModel instanceof IdDsuBlueprint, "Received Model not of same class")
+            tr.assert.true(readModel.equals(newModel), "Model from create does not match model from read");
+            callback();
+        });
     });
 });

@@ -1,7 +1,6 @@
 
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
-const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 
 const {KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
 const {BuildDsuBlueprint} = dsuBlueprintTest;
@@ -70,7 +69,7 @@ tr.run((callback) => {
     let errs = buildDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "BuildDSU shows errors");
-    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../dsu-blueprint');
+    const repo = new OpenDSURepository(BuildDsuBlueprint, "default", '../../../dsu-blueprint');
     repo.create(buildDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);

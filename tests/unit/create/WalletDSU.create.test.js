@@ -31,7 +31,8 @@ tr.run((callback) => {
         if (err)
             return callback(err);
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");
-        tr.assert.true(newModel instanceof WalletDSU, "Updated model is not of the same class")
+        tr.assert.true(newModel instanceof WalletDSU, "Updated model is not of the same class");
+        tr.assert.true(newModel !== walletDSU, "Instances are the same after creation")
         tr.assert.true(dsu !== undefined, "DSU is undefined");
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
         tr.assert.true(keySSI.getTypeName() === KeySSIType.WALLET, 'KeySSI is of different type');
