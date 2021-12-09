@@ -10,7 +10,7 @@ const {SeedDSUBlueprint} = dsuBlueprintTests;
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint SEED';
+let testName = 'DSU Blueprint SEED CREATE';
 
 const defaultOps = {
     timeout: 1000,

@@ -7,7 +7,7 @@ const {WalletDSU, KeySSIType, OpenDSURepository} = dsuBlueprint;
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint WALLET';
+let testName = 'DSU Blueprint WALLET CREATE';
 
 const defaultOps = {
     timeout: 1000,

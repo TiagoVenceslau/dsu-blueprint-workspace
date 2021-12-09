@@ -1,13 +1,12 @@
 
-const dsuBlueprint = require('../../dsu-blueprint/lib');
-const dsuBlueprintTest = require('../../dsu-blueprint/lib/tests');
-const decValidation = require('../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
-const {isEqual} = decValidation;
+const dsuBlueprint = require('../../../dsu-blueprint/lib');
+const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
+const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 
 const {KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
 const {BuildDsuBlueprint} = dsuBlueprintTest;
 
-const {OpenDSUTestRunner} = require('../../bin/TestRunner');
+const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 
 let domain = 'default';

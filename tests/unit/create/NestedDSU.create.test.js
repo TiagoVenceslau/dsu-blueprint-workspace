@@ -6,7 +6,7 @@ const {DbDsuBlueprint, KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBluep
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint NESTED';
+let testName = 'DSU Blueprint NESTED CREATE';
 
 const defaultOps = {
     timeout: 1000,

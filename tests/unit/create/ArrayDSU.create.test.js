@@ -5,7 +5,7 @@ const {ArrayDSU, KeySSIType, OpenDSURepository} = dsuBlueprint;
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'DSU Blueprint ARRAY';
+let testName = 'DSU Blueprint ARRAY CREATE';
 
 const defaultOps = {
     timeout: 1000,
