@@ -41,7 +41,7 @@ export default class SSAppDsuBlueprint extends DSUModel{
     @dsu<IdDsuBlueprint>(IdDsuBlueprint)
     id?: IdDsuBlueprint = undefined;
 
-    @dsu<ParticipantDsuBlueprint>(ParticipantDsuBlueprint, false, undefined, undefined, "id.id", "id.name", "id.address", "id.email")
+    @dsu<ParticipantDsuBlueprint>(ParticipantDsuBlueprint, false, undefined, undefined, ["id.id", "id.name", "id.address", "id.email"])
     participant?: ParticipantDsuBlueprint = undefined;
 
     @dsu<DbDsuBlueprint>(DbDsuBlueprint)
