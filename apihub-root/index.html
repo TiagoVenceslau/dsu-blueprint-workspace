@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DSU Blueprint Workspace</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="Tiago Venceslau">
+
+    <meta property="og:title" content="DSU Blueprint Workspace">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="Portfolio of possible features with decorator based DSU Blueprint">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!--    Ionic CDN-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            display: block !important;
+        }
+
+        ion-card ion-icon{
+            font-size: 64px;
+            color: var(--ion-color-medium);
+        }
+    </style>
+</head>
+
+<body>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <ion-card button="true" href="./dsu-explorer/loader" target="_blank">
+                    <div class="ion-text-center">
+                        <ion-icon name="file-tray-full"></ion-icon>
+                    </div>
+                    <ion-card-header>
+                        <ion-card-subtitle>Open SSApp</ion-card-subtitle>
+                        <ion-card-title>DSU Explorer</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <p>A useful debugging tool that allows the user to handle DSU's as they would on their own filesystem.</p>
+                        <p>Is loaded by Romsoft's loader.</p>
+                    </ion-card-content>
+                    <ion-label></ion-label>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+<!-- your content here... -->
+</body>
+</html>

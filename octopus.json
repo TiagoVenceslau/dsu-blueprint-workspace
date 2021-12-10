@@ -239,6 +239,19 @@
           }
         }
       ]
+    },
+    {
+      "name": "trust-loader-config",
+      "actions": [
+        {
+          "type": "copy",
+          "src": "./trust-loader-config/dsu-explorer",
+          "target": "./apihub-root/dsu-explorer",
+          "options": {
+            "overwrite": true
+          }
+        }
+      ]
     }
   ]
 }
