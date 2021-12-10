@@ -53,8 +53,7 @@
                 {
                     "type": "smartClone",
                     "target": ".",
-                    "collectLog": false,
-                    "commit": "6be108c5bbdde77731d62b6716661969f0b190b2"
+                    "collectLog": false
                 },
                 {
                     "type": "execute",
@@ -63,12 +62,12 @@
             ]
         },
         {
-            "name": "demo-repositories",
+            "name": "demo-ssapp",
             "src": ".",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd demo-repositories && npm install"
+                    "cmd": "cd demo-ssapp && npm install"
                 }
             ]
         },
@@ -80,7 +79,7 @@
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "def45c744cd1649ea62d59674be0f6cc6e7891cd"
+                    "commit": "44036cf46b1209529c642dc7b3b4e7f856908d8b"
                 },
                 {
                     "type": "execute",
@@ -128,7 +127,7 @@
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "63eb58ab2ac7858d1d48dd7f1a5840874c9c5999"
+                    "commit": "96ffc4841dc490818454adc65dd7a8491012947a"
                 },
                 {
                     "type": "execute",
@@ -203,6 +202,16 @@
             ]
         },
         {
+            "name": "build demo-ssapp",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd demo-ssapp && npm run build:blueprint && npm run build"
+                }
+            ]
+        },
+        {
             "name": "dossier-explorer-wallet-prototype-build",
             "src": "",
             "actions": [
@@ -240,5 +249,3 @@
         }
     ]
 }
-
-
