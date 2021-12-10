@@ -1,4 +1,3 @@
-// process.exit(0);
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
 const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
@@ -8,7 +7,6 @@ const {SSAppDsuBlueprint} = dsuBlueprintTest;
 const {isEqual} = decValidation;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
-
 
 let domain = 'default';
 let testName = 'SSApp DSU Blueprint';
@@ -42,6 +40,9 @@ const testId = function(id, dsu, callback){
             } catch (e) {
                 return callback(e);
             }
+
+            tr.assert.true(idSSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
+            tr.assert.true(idSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
 
             callback();
         });
