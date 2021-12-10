@@ -1,4 +1,4 @@
-
+process.exit(0);
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
