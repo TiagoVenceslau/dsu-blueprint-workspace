@@ -1,9 +1,11 @@
-process.exit(0);
+// process.exit(0);
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
+const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
-const {KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
+const {KeySSIType, OpenDSURepository, getKeySsiSpace, getResolver} = dsuBlueprint;
 const {SSAppDsuBlueprint} = dsuBlueprintTest;
+const {isEqual} = decValidation;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
@@ -19,45 +21,151 @@ const defaultOps = {
 
 const tr = new OpenDSUTestRunner(testName, domain, defaultOps, undefined, '../');
 
-const testDSUStructure = function(dsu, callback){
-
-    dsu.readFile("init.file", (err, data) => {
+const testId = function(id, dsu, callback){
+    dsu.readFile("id/info.json", (err, data) => {
         if (err)
             return callback(err);
-        try{
-            data = data.toString();
-        } catch (e){
+        try {
+            data = JSON.parse(data);
+        } catch (e) {
             return callback(e);
         }
 
-        tr.assert.true(data === 'delete /\n' +
-            'addfolder code\n' +
-            'mount ../cardinal/seed /cardinal\n' +
-            'mount ../themes/*/seed /themes/*', "File contents are wrong");
+        tr.assert.true(isEqual(id, data), "File contents are wrong");
 
-        dsu.listFolders('/', (err, folders) => {
+        dsu.getSSIForMount('/id', (err, idSSI) => {
+            if (err || !idSSI)
+                return callback(err || "Missing Id KeySSI");
+
+            try {
+                idSSI = getKeySsiSpace().parse(idSSI);
+            } catch (e) {
+                return callback(e);
+            }
+
+            callback();
+        });
+    });
+}
+
+const testParticipant = function(id, dsu, callback){
+    dsu.readFile('participant/id/info.json', (err, pData) => {
+        if (err)
+            return callback(err);
+        try {
+            pData = JSON.parse(pData);
+        } catch (e) {
+            return callback(e);
+        }
+        tr.assert.true(isEqual(id, pData), "Participant File contents are wrong");
+
+        dsu.listMountedDSUs('/', (err, mounts) => {
             if (err)
-                return callback(err);
-            tr.assert.true(folders && folders.length, "Folder count does not match");
-            tr.assert.true(folders[0] === 'code', "Folder name is wrong");
+                return callback(err)
+            dsu.getSSIForMount('/participant', (err, participantSSI) => {
+                if (err || !participantSSI)
+                    return callback(err || "Missing KeySSI");
 
-            dsu.listMountedDSUs('/', (err, mounts) => {
-                if (err)
-                    return callback(err);
-                tr.assert.true(mounts && mounts.length === 2 && mounts[0].path === 'webcardinal', "Cant find webcardinal");
-                tr.assert.true(mounts[1].path = 'themes/blue-fluorite-theme', 'cant find Blue Flourite theme');
-                try{
-                    const cardinalSSI = getKeySsiSpace().parse(mounts[0].identifier);
-                    tr.assert.true(cardinalSSI.getTypeName() === 'sread');
-
-                    const themeSSI = getKeySsiSpace().parse(mounts[1].identifier);
-                    tr.assert.true(themeSSI.getTypeName() === 'sread');
+                try {
+                    participantSSI = getKeySsiSpace().parse(participantSSI);
                 } catch (e) {
                     return callback(e);
                 }
 
-                callback();
+                const ssi = getKeySsiSpace().createArraySSI(domain, [id.id, id.name, id.address, id.email]);
+
+                tr.assert.true(ssi.getIdentifier() === participantSSI.getIdentifier(), "Participant DSU SSI does not match");
+
+                getResolver().loadDSU(ssi, (err, participantDSU) => {
+                    if (err || !participantDSU)
+                        return callback(err || "Missing participant DSU");
+                    participantDSU.getSSIForMount('/id', (err, idSSI) => {
+                        if (err || !idSSI)
+                            return callback(err || "Missing Id SSI");
+
+                        try {
+                            idSSI = getKeySsiSpace().parse(idSSI);
+                        } catch (e) {
+                            return callback(e);
+                        }
+                        tr.assert.true(idSSI.getTypeName() === KeySSIType.sREAD, 'KeySSI is of different type');
+                        tr.assert.true(idSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+                        callback();
+                    });
+                });
             });
+        });
+    });
+}
+
+const testDb = function(id, dsu, callback){
+    dsu.listMountedDSUs('/data', (err, mounts) => {
+        if (err)
+            return callback(err);
+        dsu.getSSIForMount('/db', (err, dbSSI) => {
+            if (err || ! dbSSI)
+                return callback(err || "Missing data DSU");
+
+            try{
+                dbSSI = getKeySsiSpace().parse(dbSSI);
+            } catch (e) {
+                return callback(e)
+            }
+
+            tr.assert.true(dbSSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
+            tr.assert.true(dbSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+
+            getResolver().loadDSU(dbSSI, (err, dbDSU) => {
+                if (err || !dbDSU)
+                    return callback(err || "Missing data DSU");
+
+                dbDSU.getSSIForMount('/data', (err, dataSSI) => {
+                    if (err || !dataSSI)
+                        return callback(err || "Missing data SSI");
+
+                    try {
+                        dataSSI = getKeySsiSpace().parse(dataSSI);
+                    } catch (e) {
+                        return callback(e);
+                    }
+                    tr.assert.true(dataSSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
+                    tr.assert.true(dataSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+                    callback();
+                });
+            });
+
+        });
+    });
+}
+
+const testCode = function(id, dsu, callback) {
+    dsu.getSSIForMount('/code', (err, codeSSI) => {
+        if (err || !codeSSI)
+            return callback(err || "Missing Code DSU");
+
+        try{
+            codeSSI = getKeySsiSpace().parse(codeSSI);
+        } catch (e) {
+            return callback(e)
+        }
+
+        tr.assert.true(codeSSI.getTypeName() === KeySSIType.sREAD, 'KeySSI is of different type');
+        tr.assert.true(codeSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
+
+        callback();
+    });
+}
+
+const testDSUStructure = function(id, dsu, callback){
+    testId(id, dsu, (err) => {
+        if (err)
+            return callback(err);
+        testParticipant(id, dsu, err => {
+            if (err)
+                return callback(err);
+            testDb(id, dsu, err => err
+                ? callback(err)
+                : testCode(id, dsu, callback));
         });
     });
 }
@@ -88,6 +196,6 @@ tr.run((callback) => {
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
         tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
         tr.assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
-        testDSUStructure(dsu, callback);
+        testDSUStructure(id, dsu, callback);
     });
 });
