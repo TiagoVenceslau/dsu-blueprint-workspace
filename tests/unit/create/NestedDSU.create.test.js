@@ -1,7 +1,7 @@
 
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
 
-const {DbDsuBlueprint, KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
+const {DbDsuBlueprint, KeySSIType, OpenDSURepository, getKeySSIApi} = dsuBlueprint;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
@@ -22,7 +22,7 @@ const testDSUStructure = function(dsu, callback){
         tr.assert.true(mounts && Object.keys(mounts).length === 1 && mounts[0].path === "data");
         let ssi;
         try {
-            ssi = getKeySsiSpace().parse(mounts[0].identifier)
+            ssi = getKeySSIApi().parse(mounts[0].identifier)
         } catch (e) {
             return callback(e)
         }

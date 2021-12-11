@@ -2,7 +2,7 @@ const dsuBlueprint = require('../../../dsu-blueprint/lib');
 const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
-const {KeySSIType, OpenDSURepository, getKeySsiSpace, getResolver} = dsuBlueprint;
+const {KeySSIType, OpenDSURepository, getKeySSIApi, getResolverApi} = dsuBlueprint;
 const {SSAppDsuBlueprint} = dsuBlueprintTest;
 const {isEqual} = decValidation;
 
@@ -36,7 +36,7 @@ const testId = function(id, dsu, callback){
                 return callback(err || "Missing Id KeySSI");
 
             try {
-                idSSI = getKeySsiSpace().parse(idSSI);
+                idSSI = getKeySSIApi().parse(idSSI);
             } catch (e) {
                 return callback(e);
             }
@@ -68,16 +68,16 @@ const testParticipant = function(id, dsu, callback){
                     return callback(err || "Missing KeySSI");
 
                 try {
-                    participantSSI = getKeySsiSpace().parse(participantSSI);
+                    participantSSI = getKeySSIApi().parse(participantSSI);
                 } catch (e) {
                     return callback(e);
                 }
 
-                const ssi = getKeySsiSpace().createArraySSI(domain, [id.id, id.name, id.address, id.email]);
+                const ssi = getKeySSIApi().createArraySSI(domain, [id.id, id.name, id.address, id.email]);
 
                 tr.assert.true(ssi.getIdentifier() === participantSSI.getIdentifier(), "Participant DSU SSI does not match");
 
-                getResolver().loadDSU(ssi, (err, participantDSU) => {
+                getResolverApi().loadDSU(ssi, (err, participantDSU) => {
                     if (err || !participantDSU)
                         return callback(err || "Missing participant DSU");
                     participantDSU.getSSIForMount('/id', (err, idSSI) => {
@@ -85,7 +85,7 @@ const testParticipant = function(id, dsu, callback){
                             return callback(err || "Missing Id SSI");
 
                         try {
-                            idSSI = getKeySsiSpace().parse(idSSI);
+                            idSSI = getKeySSIApi().parse(idSSI);
                         } catch (e) {
                             return callback(e);
                         }
@@ -108,7 +108,7 @@ const testDb = function(id, dsu, callback){
                 return callback(err || "Missing data DSU");
 
             try{
-                dbSSI = getKeySsiSpace().parse(dbSSI);
+                dbSSI = getKeySSIApi().parse(dbSSI);
             } catch (e) {
                 return callback(e)
             }
@@ -116,7 +116,7 @@ const testDb = function(id, dsu, callback){
             tr.assert.true(dbSSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
             tr.assert.true(dbSSI.getDLDomain() === 'default', 'KeySSI is of different domain');
 
-            getResolver().loadDSU(dbSSI, (err, dbDSU) => {
+            getResolverApi().loadDSU(dbSSI, (err, dbDSU) => {
                 if (err || !dbDSU)
                     return callback(err || "Missing data DSU");
 
@@ -125,7 +125,7 @@ const testDb = function(id, dsu, callback){
                         return callback(err || "Missing data SSI");
 
                     try {
-                        dataSSI = getKeySsiSpace().parse(dataSSI);
+                        dataSSI = getKeySSIApi().parse(dataSSI);
                     } catch (e) {
                         return callback(e);
                     }
@@ -145,7 +145,7 @@ const testCode = function(id, dsu, callback) {
             return callback(err || "Missing Code DSU");
 
         try{
-            codeSSI = getKeySsiSpace().parse(codeSSI);
+            codeSSI = getKeySSIApi().parse(codeSSI);
         } catch (e) {
             return callback(e)
         }

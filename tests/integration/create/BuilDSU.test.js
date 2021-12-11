@@ -2,7 +2,7 @@
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
-const {KeySSIType, OpenDSURepository, getKeySsiSpace} = dsuBlueprint;
+const {KeySSIType, OpenDSURepository, getKeySSIApi} = dsuBlueprint;
 const {BuildDsuBlueprint} = dsuBlueprintTest;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
@@ -47,10 +47,10 @@ const testDSUStructure = function(dsu, callback){
                 tr.assert.true(mounts && mounts.length === 2 && mounts[0].path === 'webcardinal', "Cant find webcardinal");
                 tr.assert.true(mounts[1].path = 'themes/blue-fluorite-theme', 'cant find Blue Flourite theme');
                 try{
-                    const cardinalSSI = getKeySsiSpace().parse(mounts[0].identifier);
+                    const cardinalSSI = getKeySSIApi().parse(mounts[0].identifier);
                     tr.assert.true(cardinalSSI.getTypeName() === 'sread');
 
-                    const themeSSI = getKeySsiSpace().parse(mounts[1].identifier);
+                    const themeSSI = getKeySSIApi().parse(mounts[1].identifier);
                     tr.assert.true(themeSSI.getTypeName() === 'sread');
                 } catch (e) {
                     return callback(e);
