@@ -3,16 +3,16 @@ const decValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/d
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
 const {KeySSIType, OpenDSURepository, getKeySSIApi, getResolverApi} = dsuBlueprint;
-const {SSAppDsuBlueprint} = dsuBlueprintTest;
+const {SSAppWebDsuBlueprint} = dsuBlueprintTest;
 const {isEqual} = decValidation;
 
 const {OpenDSUTestRunner} = require('../../../bin/TestRunner');
 
 let domain = 'default';
-let testName = 'SSApp DSU Blueprint';
+let testName = 'SSApp Web DSU Blueprint';
 
 const defaultOps = {
-    timeout: 1000,
+    timeout: 1000000,
     fakeServer: true,
     useCallback: true
 }
@@ -181,14 +181,14 @@ tr.run((callback) => {
         address: "test address"
     }
 
-    let ssAppDSU = new SSAppDsuBlueprint({
+    let ssAppDSU = new SSAppWebDsuBlueprint({
         id: id
     });
 
     let errs = ssAppDSU.hasErrors();
 
     tr.assert.true(errs === undefined, "BuildDSU shows errors");
-    const repo = new OpenDSURepository(SSAppDsuBlueprint, "default", '../../../dsu-blueprint');
+    const repo = new OpenDSURepository(SSAppWebDsuBlueprint, "default", '../../../dsu-blueprint');
     repo.create(ssAppDSU, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
