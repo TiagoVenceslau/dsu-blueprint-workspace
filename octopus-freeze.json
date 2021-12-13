@@ -1,102 +1,5 @@
 {
     "workDir": ".",
-    "dependencies": [
-        {
-            "name": "decorator-validation",
-            "src": ".",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "npm run install-privatesky"
-                }
-            ]
-        },
-        {
-            "name": "decorator-validation",
-            "src": "git@github.com:TiagoVenceslau/decorator-validation.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd decorator-validation && npm install"
-                }
-            ]
-        },
-        {
-            "name": "db-decorators",
-            "src": "git@github.com:TiagoVenceslau/db-decorators.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd db-decorators && npm install"
-                }
-            ]
-        },
-        {
-            "name": "dsu-blueprint",
-            "src": "git@github.com:TiagoVenceslau/dsu-blueprint.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd dsu-blueprint && npm install"
-                }
-            ]
-        },
-        {
-            "name": "ui-decorators",
-            "src": "git@github.com:TiagoVenceslau/ui-decorators.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd ui-decorators && npm install"
-                }
-            ]
-        },
-        {
-            "name": "ui-decorators-web",
-            "src": "git@github.com:TiagoVenceslau/ui-decorators-web.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd ui-decorators-web && npm install"
-                }
-            ]
-        },
-        {
-            "name": "demo-ssapp",
-            "src": ".",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd demo-ssapp && npm install"
-                }
-            ]
-        }
-    ],
     "privatesky-dependencies": [
         {
             "name": "cardinal",
@@ -296,6 +199,103 @@
                     "options": {
                         "overwrite": true
                     }
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "decorator-validation",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "npm run install-privatesky"
+                }
+            ]
+        },
+        {
+            "name": "decorator-validation",
+            "src": "git@github.com:TiagoVenceslau/decorator-validation.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd decorator-validation && npm install"
+                }
+            ]
+        },
+        {
+            "name": "db-decorators",
+            "src": "git@github.com:TiagoVenceslau/db-decorators.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd db-decorators && npm install"
+                }
+            ]
+        },
+        {
+            "name": "dsu-blueprint",
+            "src": "git@github.com:TiagoVenceslau/dsu-blueprint.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd dsu-blueprint && npm install"
+                }
+            ]
+        },
+        {
+            "name": "ui-decorators",
+            "src": "git@github.com:TiagoVenceslau/ui-decorators.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd ui-decorators && npm install"
+                }
+            ]
+        },
+        {
+            "name": "ui-decorators-web",
+            "src": "git@github.com:TiagoVenceslau/ui-decorators-web.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd ui-decorators-web && npm install"
+                }
+            ]
+        },
+        {
+            "name": "demo-ssapp",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd demo-ssapp && npm install"
                 }
             ]
         }
