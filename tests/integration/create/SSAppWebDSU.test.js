@@ -157,6 +157,23 @@ const testCode = function(id, dsu, callback) {
     });
 }
 
+const testEnvironmentJson = function(id, dsu, callback){
+    dsu.readFile('environment.js', (err, data) => {
+        tr.assert.true(!err, "Could not retrieve environment file");
+        tr.assert.true(!!data, "Missing environment data");
+
+        try {
+            data = JSON.parse(data);
+        } catch (e) {
+            return callback(err);
+        }
+
+        tr.assert.true(typeof data ==='object', 'Data is not an object')
+        tr.assert.true(data.appName === "DSU Explorer", "Environment data seems to be wrong")
+        callback()
+    });
+}
+
 const testDSUStructure = function(id, dsu, callback){
     testId(id, dsu, (err) => {
         if (err)
@@ -164,9 +181,13 @@ const testDSUStructure = function(id, dsu, callback){
         testParticipant(id, dsu, err => {
             if (err)
                 return callback(err);
-            testDb(id, dsu, err => err
-                ? callback(err)
-                : testCode(id, dsu, callback));
+            testDb(id, dsu, err => {
+                if (err)
+                    return callback(err);
+                testCode(id, dsu, err => err
+                    ? callback(err)
+                    : testEnvironmentJson(id, dsu, callback));
+            });
         });
     });
 }
