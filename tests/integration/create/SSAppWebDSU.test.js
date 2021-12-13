@@ -181,6 +181,8 @@ tr.run((callback) => {
         address: "test address"
     }
 
+    const keyGenArgs = ["This is such a secure password!"]
+
     let ssAppDSU = new SSAppWebDsuBlueprint({
         id: id
     });
@@ -189,7 +191,7 @@ tr.run((callback) => {
 
     tr.assert.true(errs === undefined, "BuildDSU shows errors");
     const repo = new OpenDSURepository(SSAppWebDsuBlueprint, "default", '../../../dsu-blueprint');
-    repo.create(ssAppDSU, (err, newModel, dsu, keySSI) => {
+    repo.create(ssAppDSU, ...keyGenArgs, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");

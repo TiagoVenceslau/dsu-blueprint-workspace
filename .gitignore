@@ -17,7 +17,8 @@
 /apihub-root/external-volume
 !/apihub-root/external-volume/config
 
-/demo-repositories/node_modules
+/ui-decorators
+/ui-decorators-web
 /demo-repositories/lib
 /demo-repositories/dist
 

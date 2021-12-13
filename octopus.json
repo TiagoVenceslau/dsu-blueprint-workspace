@@ -60,6 +60,36 @@
       ]
     },
     {
+      "name": "ui-decorators",
+      "src": "git@github.com:TiagoVenceslau/ui-decorators.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": ".",
+          "collectLog": false
+        },
+        {
+          "type": "execute",
+          "cmd": "cd ui-decorators && npm install"
+        }
+      ]
+    },
+    {
+      "name": "ui-decorators-web",
+      "src": "git@github.com:TiagoVenceslau/ui-decorators-web.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": ".",
+          "collectLog": false
+        },
+        {
+          "type": "execute",
+          "cmd": "cd ui-decorators-web && npm install"
+        }
+      ]
+    },
+    {
       "name": "demo-ssapp",
       "src": ".",
       "actions": [
