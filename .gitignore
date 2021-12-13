@@ -19,6 +19,8 @@
 
 /ui-decorators
 /ui-decorators-web
+/decorator-validation
+/db-decorators
 /demo-repositories/lib
 /demo-repositories/dist
 
