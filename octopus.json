@@ -95,8 +95,7 @@
           "cmd": "cd demo-ssapp && npm install"
         }
       ]
-    },
-
+    }
   ],
   "privatesky-dependencies":[
     {
