@@ -46,16 +46,12 @@ const testDSUStructure = function(dsu, model, callback){
         readFile(dsu, "__metadata.json", (err, data) => {
             if (err)
                 return callback(err);
-            tr.assert.true(isEqual(data, {
-                createdOn: model.createdOn.toString()
-            }), "__metadata.json File contents are wrong");
+            tr.assert.true(isEqual(data, model.createdOn.toString()), "__metadata.json File contents are wrong");
 
             readFile(dsu, "metadata.json", (err, data) => {
                 if (err)
                     return callback(err);
-                tr.assert.true(isEqual(data, {
-                    updatedOn: model.updatedOn.toString()
-                }), "metadata.json File contents are wrong");
+                tr.assert.true(isEqual(data, model.updatedOn.toString()), "metadata.json File contents are wrong");
 
                 callback();
             });

@@ -1,6 +1,5 @@
 
 const dsuBlueprint = require('../../../dsu-blueprint/lib');
-const decoratorValidation = require('../../../dsu-blueprint/node_modules/@tvenceslau/decorator-validation/lib');
 const dsuBlueprintTest = require('../../../dsu-blueprint/lib/tests');
 
 
@@ -13,7 +12,7 @@ let domain = 'default';
 let testName = 'DSU Blueprint SEED READ';
 
 const defaultOps = {
-    timeout: 1000,
+    timeout: 1000000,
     fakeServer: true,
     useCallback: true
 }
