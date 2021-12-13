@@ -13,7 +13,7 @@ let testName = 'DSU Blueprint SEED READ';
 
 const defaultOps = {
     timeout: 1000000,
-    fakeServer: true,
+    fakeServer: false,
     useCallback: true
 }
 

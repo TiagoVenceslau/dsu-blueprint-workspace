@@ -12,7 +12,7 @@ let domain = 'default';
 let testName = 'Build DSU Blueprint';
 
 const defaultOps = {
-    timeout: 1000,
+    timeout: 10000000,
     fakeServer: true,
     useCallback: true
 }
