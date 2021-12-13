@@ -215,6 +215,7 @@ tr.run((callback) => {
     repo.create(ssAppDSU, ...keyGenArgs, (err, newModel, dsu, keySSI) => {
         if (err)
             return callback(err);
+        console.log(`${SSAppWebDsuBlueprint.constructor.name} DSU created with SSI ${keySSI.getIdentifier()}`)
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");
         tr.assert.true(dsu !== undefined, "DSU is undefined");
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");

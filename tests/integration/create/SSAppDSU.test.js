@@ -13,7 +13,7 @@ let testName = 'SSApp DSU Blueprint';
 
 const defaultOps = {
     timeout: 1000,
-    fakeServer: true,
+    fakeServer: false,
     useCallback: true
 }
 
@@ -195,6 +195,9 @@ tr.run((callback) => {
         tr.assert.true(newModel !== undefined, "Updated Model is undefined");
         tr.assert.true(dsu !== undefined, "DSU is undefined");
         tr.assert.true(keySSI !== undefined, "KeySSI is undefined");
+
+        console.log(`${SSAppDsuBlueprint.constructor.name} DSU created with SSI ${keySSI.getIdentifier()}`);
+
         tr.assert.true(keySSI.getTypeName() === KeySSIType.SEED, 'KeySSI is of different type');
         tr.assert.true(keySSI.getDLDomain() === 'default', 'KeySSI is of different domain');
         testDSUStructure(id, dsu, callback);
