@@ -1,0 +1,7138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenDSU Blueprint Workspace Global</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">DSU Blueprint Workspace</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/TiagoVenceslau/dsu-blueprint-workspace.git"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-Cli.html">Cli</a></li><li><a href="module-Core.html">Core</a></li><li><a href="module-db-decorators.html">db-decorators</a></li><li><a href="module-decorator-validation.html">decorator-validation</a></li><li><a href="module-Filesystem.html">Filesystem</a></li><li><a href="module-ts-workspace.html">ts-workspace</a></li></ul><h3>Namespaces</h3><ul><li><a href="Cli.cli.html">cli</a></li><li><a href="cli.toolkit.html">toolkit</a></li><li><a href="Core.core.html">core</a></li><li><a href="core.model.html">model</a></li><li><a href="core.opendsu.html">opendsu</a></li><li><a href="core.opendsu.api.html">api</a></li><li><a href="core.repository.html">repository</a></li><li><a href="core.repository.cache.html">cache</a></li><li><a href="core.repository.registry.html">registry</a></li><li><a href="core.web.html">web</a></li><li><a href="db-decorators.model.html">model</a></li><li><a href="db-decorators.operations.html">operations</a></li><li><a href="db-decorators.repository.html">repository</a></li><li><a href="db-decorators.utils.html">utils</a></li><li><a href="db-decorators.validation.html">validation</a></li><li><a href="decorator-validation.utils.html">utils</a></li><li><a href="filesystem.constants.html">constants</a></li><li><a href="FileSystem.filesystem.html">filesystem</a></li><li><a href="filesystem.utils.html">utils</a></li><li><a href="logging.html">logging</a></li><li><a href="model.constants.html">constants</a></li><li><a href="Model.Decorators.html">Decorators</a></li><li><a href="model.decorators_.html">decorators</a></li><li><a href="Model.Model.html">Model</a></li><li><a href="operations.decorators.html">decorators</a></li><li><a href="repository.decorators.html">decorators</a></li><li><a href="ts-workspace.Hello.html">Hello</a></li><li><a href="utils.constants.html">constants</a></li><li><a href="utils.errors.html">errors</a></li><li><a href="utils.injectables.html">injectables</a></li><li><a href="utils.logging.html">logging</a></li><li><a href="validation.constants.html">constants</a></li><li><a href="validation.decorators.html">decorators</a></li></ul><h3>Classes</h3><ul><li><a href="core.model.ArrayDSU.html">ArrayDSU</a></li><li><a href="core.model.DbDsuBlueprint.html">DbDsuBlueprint</a></li><li><a href="core.model.DSUModel.html">DSUModel</a></li><li><a href="core.model.DSUModelRegistryImp.html">DSUModelRegistryImp</a></li><li><a href="core.model.SeedDSU.html">SeedDSU</a></li><li><a href="core.model.WalletDSU.html">WalletDSU</a></li><li><a href="core.opendsu.factory.DSUFactoryRegistry.html">DSUFactoryRegistry</a></li><li><a href="core.opendsu.factory.FactoryRegistryImp.html">FactoryRegistryImp</a></li><li><a href="core.opendsu.factory.KeySSIFactoryRegistry.html">KeySSIFactoryRegistry</a></li><li><a href="core.repository.cache.DSUCache.html">DSUCache</a></li><li><a href="core.repository.OpenDSURepository.html">OpenDSURepository</a></li><li><a href="core.repository.registry.DSUOperationRegistry.html">DSUOperationRegistry</a></li><li><a href="core.repository.registry.RepositoryRegistry.html">RepositoryRegistry</a></li><li><a href="core.web.WebServiceImp.html">WebServiceImp</a></li><li><a href="model.decorators.ModelErrorDefinition.html">ModelErrorDefinition</a></li><li><a href="model.Model_.html">Model</a></li><li><a href="Model.ModelRegistryManager.html">ModelRegistryManager</a></li><li><a href="module.exports_module.exports.html">exports</a></li><li><a href="OpenDSURepository_OpenDSURepository.html">OpenDSURepository</a></li><li><a href="SyncronousLock.html">SyncronousLock</a></li><li><a href="validation.ValidatorRegistry.html">ValidatorRegistry</a></li><li><a href="WebServiceImp_WebServiceImp.html">WebServiceImp</a></li></ul><h3>Interfaces</h3><ul><li>BuilderRegistry.&lt;<a href="global.html#T">T</a>></li><li><a href="core.opendsu.api.AnchoringApi.html">AnchoringApi</a></li><li><a href="core.opendsu.api.AuthToken.html">AuthToken</a></li><li><a href="core.opendsu.api.BdnsApi.html">BdnsApi</a></li><li><a href="core.opendsu.api.BrickingApi.html">BrickingApi</a></li><li><a href="core.opendsu.api.CacheApi.html">CacheApi</a></li><li><a href="core.opendsu.api.ConfigApi.html">ConfigApi</a></li><li><a href="core.opendsu.api.constants.ConstantsApi.html">ConstantsApi</a></li><li><a href="core.opendsu.api.constants.EnvironmentTypes.html">EnvironmentTypes</a></li><li><a href="core.opendsu.api.ContractsApi.html">ContractsApi</a></li><li><a href="core.opendsu.api.CrypoApi.html">CrypoApi</a></li><li><a href="core.opendsu.api.crypto.JWT.html">JWT</a></li><li><a href="core.opendsu.api.db.DSUDatabase.html">DSUDatabase</a></li><li><a href="core.opendsu.api.DBApi.html">DBApi</a></li><li><a href="core.opendsu.api.DSUDid.html">DSUDid</a></li><li><a href="core.opendsu.api.DSUEnclave.html">DSUEnclave</a></li><li><a href="core.opendsu.api.DSUObservable.html">DSUObservable</a></li><li><a href="core.opendsu.api.DSUSecurityContext.html">DSUSecurityContext</a></li><li><a href="core.opendsu.api.DSUStorage.html">DSUStorage</a></li><li><a href="core.opendsu.api.enclave.ApiHubSecurityProxy.html">ApiHubSecurityProxy</a></li><li><a href="core.opendsu.api.enclave.HighSecurityProxy.html">HighSecurityProxy</a></li><li><a href="core.opendsu.api.EnclaveApi.html">EnclaveApi</a></li><li><a href="core.opendsu.api.ErrorApi.html">ErrorApi</a></li><li><a href="core.opendsu.api.HttpApi.html">HttpApi</a></li><li><a href="core.opendsu.api.KeySSI.html">KeySSI</a></li><li><a href="core.opendsu.api.keyssi.ArraySSI.html">ArraySSI</a></li><li><a href="core.opendsu.api.keyssi.ConstSSI.html">ConstSSI</a></li><li><a href="core.opendsu.api.keyssi.SeedSSI.html">SeedSSI</a></li><li><a href="core.opendsu.api.keyssi.sReadSSI.html">sReadSSI</a></li><li><a href="core.opendsu.api.keyssi.WalletSSI.html">WalletSSI</a></li><li><a href="core.opendsu.api.KeyssiApi.html">KeyssiApi</a></li><li><a href="core.opendsu.api.m2dsu.ErrMap.html">ErrMap</a></li><li><a href="core.opendsu.api.m2dsu.MessagePipe.html">MessagePipe</a></li><li><a href="core.opendsu.api.M2DsuApi.html">M2DsuApi</a></li><li><a href="core.opendsu.api.MappingEngine.html">MappingEngine</a></li><li><a href="core.opendsu.api.MessageQueueApi.html">MessageQueueApi</a></li><li><a href="core.opendsu.api.NotificationsApi.html">NotificationsApi</a></li><li><a href="core.opendsu.api.oauth.DecodedToken.html">DecodedToken</a></li><li><a href="core.opendsu.api.oauth.OIDC.html">OIDC</a></li><li><a href="core.opendsu.api.OAuthApi.html">OAuthApi</a></li><li><a href="core.opendsu.api.OAuthStorage.html">OAuthStorage</a></li><li><a href="core.opendsu.api.OpenDSUCache.html">OpenDSUCache</a></li><li><a href="core.opendsu.api.OpenDSUUtilsApi.html">OpenDSUUtilsApi</a></li><li><a href="core.opendsu.api.OpenDSUWorkersApi.html">OpenDSUWorkersApi</a></li><li><a href="core.opendsu.api.ResolverApi.html">ResolverApi</a></li><li><a href="core.opendsu.api.SecurityContextApi.html">SecurityContextApi</a></li><li><a href="core.opendsu.api.StorageApi.html">StorageApi</a></li><li><a href="core.opendsu.api.SystemApi.html">SystemApi</a></li><li><a href="core.opendsu.api.w3cdid.CryptographicSkillsApi.html">CryptographicSkillsApi</a></li><li><a href="core.opendsu.api.W3cDIDApi.html">W3cDIDApi</a></li><li><a href="core.opendsu.api.WorkerPool.html">WorkerPool</a></li><li><a href="core.opendsu.DSU.html">DSU</a></li><li><a href="core.opendsu.DSUFactory.html">DSUFactory</a></li><li><a href="core.opendsu.DSUHandler.html">DSUHandler</a></li><li><a href="core.opendsu.OpenDSU.html">OpenDSU</a></li><li><a href="core.opendsu.WalletDsu.html">WalletDsu</a></li><li><a href="core.web.WebService.html">WebService</a></li><li><a href="filesystem.utils.fs.html">fs</a></li><li><a href="filesystem.utils.path.html">path</a></li><li><a href="utils.BuilderRegistry.html">BuilderRegistry</a></li><li><a href="utils.IRegistry.html">IRegistry</a></li><li><a href="validation.IValidatorRegistry.html">IValidatorRegistry</a></li><li><a href="Validation.Validatable.html">Validatable</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildDSU">buildDSU</a></li><li><a href="global.html#construct">construct</a></li><li><a href="global.html#getAllProperties">getAllProperties</a></li><li><a href="global.html#hasErrors">hasErrors</a></li><li><a href="global.html#inject">inject</a></li><li><a href="global.html#prefixMethod">prefixMethod</a></li><li><a href="global.html#prefixMethodAsync">prefixMethodAsync</a></li><li><a href="global.html#suffixMethod">suffixMethod</a></li><li><a href="global.html#suffixMethodAsync">suffixMethodAsync</a></li><li><a href="global.html#updateDSU">updateDSU</a></li><li><a href="global.html#wrapMethod">wrapMethod</a></li><li><a href="global.html#wrapMethodAsync">wrapMethodAsync</a></li></ul></div><div class="category"><h2>Decorators</h2><h3>Global</h3><ul><li><a href="global.html#addFileFS">addFileFS</a></li><li><a href="global.html#addFolderFS">addFolderFS</a></li><li><a href="global.html#date">date</a></li><li><a href="global.html#DSUBlueprint">DSUBlueprint</a></li><li><a href="global.html#dsuFile">dsuFile</a></li><li><a href="global.html#dsuFS">dsuFS</a></li><li><a href="global.html#dsuRepository">dsuRepository</a></li><li><a href="global.html#email">email</a></li><li><a href="global.html#environment">environment</a></li><li><a href="global.html#fromURL">fromURL</a></li><li><a href="global.html#fromWeb">fromWeb</a></li><li><a href="global.html#getFsKey">getFsKey</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#maxlength">maxlength</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minlength">minlength</a></li><li><a href="global.html#model">model</a></li><li><a href="global.html#mount">mount</a></li><li><a href="global.html#pattern">pattern</a></li><li><a href="global.html#required">required</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#url">url</a></li><li><a href="global.html#wallet">wallet</a></li></ul></div><div class="category"><h2>Tests</h2><h3>Classes</h3><ul><li><a href="ArrayDSUModel.html">ArrayDSUModel</a></li><li><a href="BuildDsuBlueprint.html">BuildDsuBlueprint</a></li><li><a href="FSDSUModel.html">FSDSUModel</a></li><li><a href="IdDsuBlueprint.html">IdDsuBlueprint</a></li><li><a href="ParticipantDsuBlueprint.html">ParticipantDsuBlueprint</a></li><li><a href="SeedDSUBlueprint.html">SeedDSUBlueprint</a></li><li><a href="SSAppDsuBlueprint.html">SSAppDsuBlueprint</a></li><li><a href="SSAppWebDsuBlueprint.html">SSAppWebDsuBlueprint</a></li><li><a href="TestIdDsuBlueprint.html">TestIdDsuBlueprint</a></li></ul></div><div class="category"><h2>Validators</h2><h3>Classes</h3><ul><li><a href="DateValidator.html">DateValidator</a></li><li><a href="EmailValidator.html">EmailValidator</a></li><li><a href="MaxLengthValidator.html">MaxLengthValidator</a></li><li><a href="MaxValidator.html">MaxValidator</a></li><li><a href="MinLengthValidator.html">MinLengthValidator</a></li><li><a href="MinValidator.html">MinValidator</a></li><li><a href="PatternValidator.html">PatternValidator</a></li><li><a href="RequiredValidator.html">RequiredValidator</a></li><li><a href="StepValidator.html">StepValidator</a></li><li><a href="URLValidator.html">URLValidator</a></li><li><a href="Validator.html">Validator</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Title</p>
+                    <h1>Global</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="date">
+    <a class="href-link" href="#date">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        date
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Date Handler Decorator</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.DATE</p>
+<p>Will enforce serialization according to the selected format</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Date Handler Decorator</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.DATE</p>
+<p>Will enforce serialization according to the selected format</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line248">line 248</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="DSUBlueprint">
+    <a class="href-link" href="#DSUBlueprint">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        DSUBlueprint
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>DSU Blueprint Decorator</p>
+<p>Defines a class as a DSU Blueprint, enabling:</p>
+<ul>
+<li>Automatic CRUD operations, just by updating its corresponding DSUModel instance and running it through the appropriate <a href="OpenDSURepository.html">OpenDSURepository</a>;</li>
+<li>Automatic validations &amp;&amp; easily extendable for added validations;</li>
+<li>Automatic serialization -&gt; transmission -&gt; deserialization;</li>
+<li>Controlled accesses: Ability easily to add business logic at key points of any CRUD operations</li>
+</ul>
+<p>Supported KeySSITypes:</p>
+<ul>
+<li>KeySSIType.SEED: Expects:
+<ul>
+<li>keySsiType: KeySSIType.SEED;</li>
+<li>specificKeyArgs: SeedSSISpecificArgs | undefined;</li>
+<li>props: none</li>
+</ul>
+</li>
+<li>KeySSIType.ARRAY: Expects:
+<ul>
+<li>keySsiType: KeySSIType.ARRAY;</li>
+<li>specificKeyArgs: ArraySSISpecificArgs | undefined;</li>
+<li>props: {string[] | undefined} array of property names in the value chain notation getValueFromValueChain createObjectToValueChain that will be resolved from the DSUModel's content and used to pass as KeySSI generation Arguments.</li></ul></li></ul></p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>DSU Blueprint Decorator</p>
+<p>Defines a class as a DSU Blueprint, enabling:</p>
+<ul>
+<li>Automatic CRUD operations, just by updating its corresponding DSUModel instance and running it through the appropriate <a href="OpenDSURepository.html">OpenDSURepository</a>;</li>
+<li>Automatic validations &amp;&amp; easily extendable for added validations;</li>
+<li>Automatic serialization -&gt; transmission -&gt; deserialization;</li>
+<li>Controlled accesses: Ability easily to add business logic at key points of any CRUD operations</li>
+</ul>
+<p>Supported KeySSITypes:</p>
+<ul>
+<li>KeySSIType.SEED: Expects:
+<ul>
+<li>keySsiType: KeySSIType.SEED;</li>
+<li>specificKeyArgs: SeedSSISpecificArgs | undefined;</li>
+<li>props: none</li>
+</ul>
+</li>
+<li>KeySSIType.ARRAY: Expects:
+<ul>
+<li>keySsiType: KeySSIType.ARRAY;</li>
+<li>specificKeyArgs: ArraySSISpecificArgs | undefined;</li>
+<li>props: {string[] | undefined} array of property names in the value chain notation getValueFromValueChain createObjectToValueChain that will be resolved from the DSUModel's content and used to pass as KeySSI generation Arguments. <strong>Must resolve to strings</strong></li>
+<li>extra Key generation args {string[] | undefined} that are passed to the <a href="OpenDSURepository.html">OpenDSURepository</a>'s methods will be appended to the ones from the props and also used to generate the KeySSI</li>
+</ul>
+</li>
+<li>KeySSIType.WALLET: Expects:
+<ul>
+<li>keySsiType: KeySSIType.WALLET;</li>
+<li>specificKeyArgs: WalletSSISpecificArgs | undefined;</li>
+<li>props: {string[] | undefined}: array of property names in the value chain notation getValueFromValueChain createObjectToValueChain that will be resolved from the DSUModel's content and used to pass as KeySSI generation Arguments. <strong>Must resolve to strings</strong></li>
+<li>extra Key generation args {string[] | undefined} that are passed to the <a href="OpenDSURepository.html">OpenDSURepository</a>'s methods will be appended to the ones from the props and also used to generate the KeySSI</li>
+<li>One Supported decorator under the <a href="ConstantsApi.html#CODE_FOLDER">ConstantsApi#CODE_FOLDER</a> property key (defaults to 'code'). Supported decorators are:
+<ul>
+<li><a href="global.html#fromWeb">fromWeb</a>;</li>
+<li>fromCache;</li>
+<li><a href="global.html#mount">mount</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="OpenDSURepository.html">OpenDSURepository</a> OperationKeys's this decorator acts on:</p>
+<ul>
+<li>OperationKeys.CREATE: Creates the <a href="global.html#DSUBlueprint">DSUBlueprint</a>:
+<ul>
+<li>Gets the keySSI and the DSUFactoryMethod's DSUAnchoringOptions from the <a href="KeySSIFactoryRegistry.html">KeySSIFactoryRegistry</a>;</li>
+<li>Creates the <a href="DSU.html">DSU</a> via the <a href="DSUFactoryRegistry.html#build">DSUFactoryRegistry#build</a></li>
+</ul>
+</li>
+<li>OperationKeys.READ:</li>
+<li>OperationKeys.UPDATE:</li>
+<li>OperationKeys.DELETE:</li>
+</ul>
+<p>DSUOperationPhase phases this decorator acts on:</p>
+<ul>
+<li>DSUOperationPhase.CLASS:</li>
+</ul>
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>domain</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>the DSU domain. default to undefined. when undefined, its the repository that controls the domain;</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>keySSIType</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">KeySSIType</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>the KeySSI type used to anchor the DSU</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>specificKeyArgs</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">KeySSISpecificArgs</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>OpenDSU related arguments, specific to each KeySSI implementation.</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>options</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">DSUAnchoringOptions</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>defaults to undefined.</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>batchMode</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">boolean</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>defaults to true. decides if batchMode is meant to be used for this DSU</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>props</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Array.&lt;string></span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>any object properties that must be passed to the KeySSI generation function (eg: for Array SSIs)</p></td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Because everything is declarative, the hash of the DSUModel class file string literal + the hash of the dsu-blueprint bundle file can be used stored as DSU metadata and serve as proof of authenticity in theory. I guess if we store this lib.</li>
+        </ul>
+    </dd>
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_model_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_model_decorators.ts.html">dsu-blueprint/src/core/model/decorators.ts</a>, <a href="dsu-blueprint_src_core_model_decorators.ts.html#line75">line 75</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="email">
+    <a class="href-link" href="#email">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        email
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines the property as an email</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.EMAIL</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines the property as an email</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.EMAIL</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line187">line 187</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="inject">
+    <a class="href-link" href="#inject">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        inject
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Allows for the injection of an injectable decorated dependency
+the property must be typed for the requested dependency.</p></p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Allows for the injection of an injectable decorated dependency
+the property must be typed for the requested dependency.</p>
+<p>Only concrete classes. No generics are supported</p>
+<p>Injected properties should be described like so:</p>
+<pre>
+    class ClassName {
+        ...
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_injectables_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_injectables_decorators.ts.html">db-decorators/src/injectables/decorators.ts</a>, <a href="db-decorators_src_injectables_decorators.ts.html#line71">line 71</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="max">
+    <a class="href-link" href="#max">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        max
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a maximum value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MAX</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a maximum value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MAX</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line83">line 83</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="maxlength">
+    <a class="href-link" href="#maxlength">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        maxlength
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a maximum length for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MAX_LENGTH</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a maximum length for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MAX_LENGTH</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line146">line 146</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="min">
+    <a class="href-link" href="#min">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        min
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a minimum value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MIN</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a minimum value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MIN</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line60">line 60</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="minlength">
+    <a class="href-link" href="#minlength">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        minlength
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a minimum length for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MIN_LENGTH</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a minimum length for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.MIN_LENGTH</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line125">line 125</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="model">
+    <a class="href-link" href="#model">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        model
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a class as a Model class for serialization purposes</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a class as a Model class for serialization purposes</p>
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>props</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Object</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>additional properties to store as metadata</p></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>instanceCallback</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">function</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last"><p>optional callback that will be call with the instance upon instantiation. defaults to undefined</p></td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_Model_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_Model_decorators.ts.html">decorator-validation/src/Model/decorators.ts</a>, <a href="decorator-validation_src_Model_decorators.ts.html#line29">line 29</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="pattern">
+    <a class="href-link" href="#pattern">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        pattern
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a RegExp pattern the property must respect</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.PATTERN</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a RegExp pattern the property must respect</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.PATTERN</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line167">line 167</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="required">
+    <a class="href-link" href="#required">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        required
+    </span>
+    
+</h4>
+
+
+<p class="summary">Marks the property as required.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Marks the property as required.</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.REQUIRED</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line41">line 41</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="step">
+    <a class="href-link" href="#step">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        step
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines a step value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.STEP</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a step value for the property</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.STEP</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line104">line 104</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="type">
+    <a class="href-link" href="#type">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        type
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Enforces type verification</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.TYPE</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Enforces type verification</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.TYPE</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line226">line 226</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="url">
+    <a class="href-link" href="#url">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        url
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Defines the property as an URL</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.URL</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines the property as an URL</p>
+<p>Validators to validate a decorated property must use key ValidationKeys.URL</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_decorators.ts.html">decorator-validation/src/validation/decorators.ts</a>, <a href="decorator-validation_src_validation_decorators.ts.html#line206">line 206</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="addFileFS">
+        <a class="href-link" href="#addFileFS">#</a>
+        
+        <span class="code-name">
+            
+                addFileFS<span class="signature">(fsPath, dsuPath<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>fsPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the source path for the file in the filesystem</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>dsuPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the path in the dsu where to store the file overriding the property name;</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>options</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>sets the DSUIOOptions fot the write operation</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_fs_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_fs_decorators.ts.html">dsu-blueprint/src/fs/decorators.ts</a>, <a href="dsu-blueprint_src_fs_decorators.ts.html#line98">line 98</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="addFolderFS">
+        <a class="href-link" href="#addFolderFS">#</a>
+        
+        <span class="code-name">
+            
+                addFolderFS<span class="signature">(fsPath<span class="signature-attributes">opt</span>, dsuPath<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>fsPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the source path for the file in the filesystem. defaults to property key</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>dsuPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the path in the dsu where to store the file overriding the property name;</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>options</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>sets the DSUIOOptions fot the write operation</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_fs_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_fs_decorators.ts.html">dsu-blueprint/src/fs/decorators.ts</a>, <a href="dsu-blueprint_src_fs_decorators.ts.html#line129">line 129</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="buildDSU">
+        <a class="href-link" href="#buildDSU">#</a>
+        
+        <span class="code-name">
+            
+                buildDSU<span class="signature">(config, callback)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Builds a DSU from a transpiled <a href="global.html#DSUBlueprint">DSUBlueprint</a> file or Updates it</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Builds a DSU from a transpiled <a href="global.html#DSUBlueprint">DSUBlueprint</a> file or Updates it</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>config</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">CliOptions</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>the cli options</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>callback</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">DSUCallback.&lt;DSUModel></span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_cli_toolkit.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_cli_toolkit.ts.html">dsu-blueprint/src/cli/toolkit.ts</a>, <a href="dsu-blueprint_src_cli_toolkit.ts.html#line171">line 171</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="construct">
+        <a class="href-link" href="#construct">#</a>
+        
+        <span class="code-name">
+            
+                construct<span class="signature">(constructor, args)</span><span class="type-signature"> &rarr; {<a href="global.html#T">T</a>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Helper Function to override constructors</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Helper Function to override constructors</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>constructor</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>args</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Array.&lt;any></span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>the new instance</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<span class="param-type"><a href="global.html#T">T</a></span>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="dsuFile">
+        <a class="href-link" href="#dsuFile">#</a>
+        
+        <span class="code-name">
+            
+                dsuFile<span class="signature">(dsuPath<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Writes the content of the Model property onto the DSU, in the chosen path</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Writes the content of the Model property onto the DSU, in the chosen path</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>dsuPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the mount path. defaults to the property key</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_model_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_model_decorators.ts.html">dsu-blueprint/src/core/model/decorators.ts</a>, <a href="dsu-blueprint_src_core_model_decorators.ts.html#line236">line 236</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="dsuFS">
+        <a class="href-link" href="#dsuFS">#</a>
+        
+        <span class="code-name">
+            
+                dsuFS<span class="signature">(app, derive<span class="signature-attributes">opt</span>, mountPath<span class="signature-attributes">opt</span>, mountOptions<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>app</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the name of the folder in the workspace where the seed file is located;</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>derive</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>decides if derives the SSI or not. defaults to false</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>mountPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the mount path, overriding the property name;</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>mountOptions</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>sets the DSUIOOptions fot the mount operation</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_fs_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_fs_decorators.ts.html">dsu-blueprint/src/fs/decorators.ts</a>, <a href="dsu-blueprint_src_fs_decorators.ts.html#line31">line 31</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="dsuRepository">
+        <a class="href-link" href="#dsuRepository">#</a>
+        
+        <span class="code-name">
+            
+                dsuRepository<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Defines a class as a DSU Repository (makes it injectable)</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Defines a class as a DSU Repository (makes it injectable)</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_repository_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_repository_decorators.ts.html">dsu-blueprint/src/core/repository/decorators.ts</a>, <a href="dsu-blueprint_src_core_repository_decorators.ts.html#line59">line 59</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="environment">
+        <a class="href-link" href="#environment">#</a>
+        
+        <span class="code-name">
+            
+                environment<span class="signature">(fileName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Writes the Environment configuration into a DSU (mandatory for for SSApps)</p>
+<p>The environment file will be saved in json format in the DSU</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Writes the Environment configuration into a DSU (mandatory for for SSApps)</p>
+<p>The environment file will be saved in json format in the DSU</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>fileName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defaults to ConstantsApi.ENVIRONMENT_PATH</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_web_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_web_decorators.ts.html">dsu-blueprint/src/core/web/decorators.ts</a>, <a href="dsu-blueprint_src_core_web_decorators.ts.html#line164">line 164</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="fromURL">
+        <a class="href-link" href="#fromURL">#</a>
+        
+        <span class="code-name">
+            
+                fromURL<span class="signature">(url, toJson<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Performs a Get request to the supplied url with the supplied options and stores the result in the model under the decorated property</p>
+<p>Acts during the DSUOperationPhase.PREPARATION phase;</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Performs a Get request to the supplied url with the supplied options and stores the result in the model under the decorated property</p>
+<p>Acts during the DSUOperationPhase.PREPARATION phase;</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>url</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>toJson</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defaults to false. if true, tries to parse the result to json</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>options</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Object</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>options to be passed to the get request</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_web_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_web_decorators.ts.html">dsu-blueprint/src/core/web/decorators.ts</a>, <a href="dsu-blueprint_src_core_web_decorators.ts.html#line23">line 23</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="fromWeb">
+        <a class="href-link" href="#fromWeb">#</a>
+        
+        <span class="code-name">
+            
+                fromWeb<span class="signature">(appOrUrl, slot, triggerMount<span class="signature-attributes">opt</span>, derive<span class="signature-attributes">opt</span>, mountPath<span class="signature-attributes">opt</span>, mountOptions<span class="signature-attributes">opt</span>, keyOverride<span class="signature-attributes">opt</span>, args<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Depending on whether and url or an app name is supplied:</p>
+<ul>
+<li>App Name: Communicates with ApiHub to get seeds from SSApps installed in that ApiHub instance:
+<ul>
+<li>slot 'primary': gets the seed file from the App's 'wallet-patch' folder;</li>
+<li>slot 'secondary' gets the seed file from the App's <a href="ConstantsApi.html#APP_FOLDER">ConstantsApi#APP_FOLDER</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>Retrieves the Seed during the DSUOperationPhase.CREATION operation and DBOperations.CREATE phases
+and stores in the in object under the matching property key</p>
+<p>calls <a href="global.html#mount">mount</a> on this property to mount the seed during the DSUOperationPhase.EDITING operation;</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Depending on whether and url or an app name is supplied:</p>
+<ul>
+<li>App Name: Communicates with ApiHub to get seeds from SSApps installed in that ApiHub instance:
+<ul>
+<li>slot 'primary': gets the seed file from the App's 'wallet-patch' folder;</li>
+<li>slot 'secondary' gets the seed file from the App's <a href="ConstantsApi.html#APP_FOLDER">ConstantsApi#APP_FOLDER</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>Retrieves the Seed during the DSUOperationPhase.CREATION operation and DBOperations.CREATE phases
+and stores in the in object under the matching property key</p>
+<p>calls <a href="global.html#mount">mount</a> on this property to mount the seed during the DSUOperationPhase.EDITING operation;</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>appOrUrl</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the app name to look for in ApiHub or the URL to an endpoint to call</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>slot</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">"primary"</span>
+|
+
+<span class="param-type">"secondary"</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the slot where the seed can be found. 'primary' refers to the 'wallet slot' and secondary to the 'apps slot'. defaults to 'primary' and is mandatory when an App Name is provided. is discarded if a URL is detected in the appName</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>triggerMount</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>Decides if the DSU retrieved will be mounted or not. defaults to true. all following params require this to be true to be used</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>derive</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+|
+
+<span class="param-type">number</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines how many (if any) times the KeySSI will be Derived before use (only used when {@param triggerMount} is true)</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>mountPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the mount path. defaults to the property key</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>mountOptions</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">DSUIOOptions</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>options to be passed to OpenDSU for the mounting operation</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>keyOverride</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>and extension tool, to allow wallet decorator to use this one for himself</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>args</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Array.&lt;any></span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>Not used in current implementation. Meant for extending decorators</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_web_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_web_decorators.ts.html">dsu-blueprint/src/core/web/decorators.ts</a>, <a href="dsu-blueprint_src_core_web_decorators.ts.html#line79">line 79</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getAllProperties">
+        <a class="href-link" href="#getAllProperties">#</a>
+        
+        <span class="code-name">
+            
+                getAllProperties<span class="signature">(obj, climbTree<span class="signature-attributes">opt</span>, stopAt<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Retrieves all properties of an object:</p>
+<ul>
+<li>and of all its prototypes if {@param climbTree} until it reaches {@param stopAt} (or ends the prototype chain)</li>
+</ul>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Retrieves all properties of an object:</p>
+<ul>
+<li>and of all its prototypes if {@param climbTree} until it reaches {@param stopAt} (or ends the prototype chain)</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>climbTree</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>default to true</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>stopAt</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defaults to 'Object'</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line205">line 205</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getFsKey">
+        <a class="href-link" href="#getFsKey">#</a>
+        
+        <span class="code-name">
+            
+                getFsKey<span class="signature">(key)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Returns the complete Reflection FS Key</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Returns the complete Reflection FS Key</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>key</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_fs_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_fs_decorators.ts.html">dsu-blueprint/src/fs/decorators.ts</a>, <a href="dsu-blueprint_src_fs_decorators.ts.html#line19">line 19</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>string</p></div>
+    
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="hasErrors">
+        <a class="href-link" href="#hasErrors">#</a>
+        
+        <span class="code-name">
+            
+                hasErrors<span class="signature">(previousVersion<span class="signature-attributes">opt</span>, &hellip;exclusions<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>previousVersion</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">DBModel</span>
+|
+
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>validates an update via the DBModel decorators</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>exclusions</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Array.&lt;any></span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+          &lt;repeatable><br>
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>{@see Model#hasErrors}</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_model_DBModel.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_model_DBModel.ts.html">db-decorators/src/model/DBModel.ts</a>, <a href="db-decorators_src_model_DBModel.ts.html#line26">line 26</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="mount">
+        <a class="href-link" href="#mount">#</a>
+        
+        <span class="code-name">
+            
+                mount<span class="signature">(mountPath<span class="signature-attributes">opt</span>, derive<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>, args<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary">Mounts the keySSI in the property value it holds.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Mounts the keySSI in the property value it holds.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>mountPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>defines the mount path. defaults to the property key</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>derive</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+|
+
+<span class="param-type">number</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>options</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">DSUIOOptions</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>args</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Array.&lt;any></span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>optional params. meant for extending decorators</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_model_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_model_decorators.ts.html">dsu-blueprint/src/core/model/decorators.ts</a>, <a href="dsu-blueprint_src_core_model_decorators.ts.html#line303">line 303</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="prefixMethod">
+        <a class="href-link" href="#prefixMethod">#</a>
+        
+        <span class="code-name">
+            
+                prefixMethod<span class="signature">(obj, after, prefix, afterName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Util method to change a method of an object prefixing it with another</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Util method to change a method of an object prefixing it with another</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>after</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>prefix</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Prefix method. The output will be used as arguments in the original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>afterName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function anme cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line26">line 26</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="prefixMethodAsync">
+        <a class="href-link" href="#prefixMethodAsync">#</a>
+        
+        <span class="code-name">
+            
+                prefixMethodAsync<span class="signature">(obj, after, prefix, afterName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>The Async version of <a href="global.html#prefixMethod">prefixMethod</a></p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>The Async version of <a href="global.html#prefixMethod">prefixMethod</a></p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>after</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>prefix</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Prefix method. The output will be used as arguments in the original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>afterName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function name cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line72">line 72</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="suffixMethod">
+        <a class="href-link" href="#suffixMethod">#</a>
+        
+        <span class="code-name">
+            
+                suffixMethod<span class="signature">(obj, before, suffix, beforeName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Util method to change a method of an object suffixing it with another</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Util method to change a method of an object suffixing it with another</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>before</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>suffix</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Prefix method. The output will be used as arguments in the original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>beforeName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function anme cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line40">line 40</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="suffixMethodAsync">
+        <a class="href-link" href="#suffixMethodAsync">#</a>
+        
+        <span class="code-name">
+            
+                suffixMethodAsync<span class="signature">(obj, before, suffix, beforeName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>The Async version of <a href="global.html#suffixMethod">suffixMethod</a></p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>The Async version of <a href="global.html#suffixMethod">suffixMethod</a></p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>before</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>suffix</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Prefix method. The output will be used as arguments in the original method</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>beforeName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function name cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line91">line 91</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateDSU">
+        <a class="href-link" href="#updateDSU">#</a>
+        
+        <span class="code-name">
+            
+                updateDSU<span class="signature">(config, keySSI, callback)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Builds a DSU from a transpiled <a href="global.html#DSUBlueprint">DSUBlueprint</a> file or Updates it</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Builds a DSU from a transpiled <a href="global.html#DSUBlueprint">DSUBlueprint</a> file or Updates it</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>config</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">CliOptions</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>the cli options</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>keySSI</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">KeySSI</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>the KeySSI of the <a href="DSU.html">DSU</a> to update</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>callback</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">DSUCallback.&lt;DSUModel></span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_cli_toolkit.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_cli_toolkit.ts.html">dsu-blueprint/src/cli/toolkit.ts</a>, <a href="dsu-blueprint_src_cli_toolkit.ts.html#line195">line 195</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="wallet">
+        <a class="href-link" href="#wallet">#</a>
+        
+        <span class="code-name">
+            
+                wallet<span class="signature">(app, derive<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Retrieves the Wallet Seed from ApiHub and stores in the <a href="ConstantsApi.html#CODE_FOLDER">ConstantsApi#CODE_FOLDER</a> property</p>
+<p>Wrapper decorator around "primary", false)</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Retrieves the Wallet Seed from ApiHub and stores in the <a href="ConstantsApi.html#CODE_FOLDER">ConstantsApi#CODE_FOLDER</a> property</p>
+<p>Wrapper decorator around "primary", false)</p><div class="mermaid">sequenceDiagram
+     wallet->>fromWeb(app, "primary", false)</div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>app</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the app name to look for in ApiHub</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>derive</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">boolean</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>If the KeySSI should be derived (how many times). defaults to true</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_web_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_web_decorators.ts.html">dsu-blueprint/src/core/web/decorators.ts</a>, <a href="dsu-blueprint_src_core_web_decorators.ts.html#line148">line 148</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="wrapMethod">
+        <a class="href-link" href="#wrapMethod">#</a>
+        
+        <span class="code-name">
+            
+                wrapMethod<span class="signature">(obj, before, method, after, methodName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>Util method to wrap a method of an object with additional logic</p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Util method to wrap a method of an object with additional logic</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>before</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the method to be prefixed</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>method</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the method to be wrapped</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>after</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The method to be suffixed</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>methodName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function anme cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line56">line 56</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="wrapMethodAsync">
+        <a class="href-link" href="#wrapMethodAsync">#</a>
+        
+        <span class="code-name">
+            
+                wrapMethodAsync<span class="signature">(obj, before, method, after, methodName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary"><p>The Async version of <a href="global.html#wrapMethod">wrapMethod</a></p>.</p>
+    
+    
+    <div class="description">
+        <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>The Async version of <a href="global.html#wrapMethod">wrapMethod</a></p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>obj</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">any</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The Base Object</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>before</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the method to be prefixed</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>method</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>the method to be wrapped</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>after</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">function</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>The method to be suffixed</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>methodName</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>When the after function name cannot be extracted, pass it here</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_utils_utils.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_utils_utils.ts.html">db-decorators/src/utils/utils.ts</a>, <a href="db-decorators_src_utils_utils.ts.html#line111">line 111</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Type Definitions</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="T">
+    <a class="href-link" href="#T">#</a>
+    
+    <span class="code-name">
+        T
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="db-decorators_src_repository_repository.ts.html" class="button">View Source</a>
+            <span>
+                <a href="db-decorators_src_repository_repository.ts.html">db-decorators/src/repository/repository.ts</a>, <a href="db-decorators_src_repository_repository.ts.html#line50">line 50</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="T">
+    <a class="href-link" href="#T">#</a>
+    
+    <span class="code-name">
+        T
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html">decorator-validation/src/validation/ValidatorRegistry.ts</a>, <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html#line22">line 22</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="T">
+    <a class="href-link" href="#T">#</a>
+    
+    <span class="code-name">
+        T
+    </span>
+    
+</h4>
+
+
+<p class="summary"><p>Registers the provided validators onto the registry</p>.</p>
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script><p>Registers the provided validators onto the registry</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html" class="button">View Source</a>
+            <span>
+                <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html">decorator-validation/src/validation/ValidatorRegistry.ts</a>, <a href="decorator-validation_src_validation_ValidatorRegistry.ts.html#line38">line 38</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="T">
+    <a class="href-link" href="#T">#</a>
+    
+    <span class="code-name">
+        T
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_model_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_model_decorators.ts.html">dsu-blueprint/src/core/model/decorators.ts</a>, <a href="dsu-blueprint_src_core_model_decorators.ts.html#line124">line 124</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="T">
+    <a class="href-link" href="#T">#</a>
+    
+    <span class="code-name">
+        T
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <script type="text/javascript" src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="dsu-blueprint_src_core_repository_decorators.ts.html" class="button">View Source</a>
+            <span>
+                <a href="dsu-blueprint_src_core_repository_decorators.ts.html">dsu-blueprint/src/core/repository/decorators.ts</a>, <a href="dsu-blueprint_src_core_repository_decorators.ts.html#line8">line 8</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+</body>
+</html>

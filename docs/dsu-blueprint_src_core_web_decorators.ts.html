@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenDSU Blueprint Workspace dsu-blueprint/src/core/web/decorators.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">DSU Blueprint Workspace</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/TiagoVenceslau/dsu-blueprint-workspace.git"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-Cli.html">Cli</a></li><li><a href="module-Core.html">Core</a></li><li><a href="module-db-decorators.html">db-decorators</a></li><li><a href="module-decorator-validation.html">decorator-validation</a></li><li><a href="module-Filesystem.html">Filesystem</a></li><li><a href="module-ts-workspace.html">ts-workspace</a></li></ul><h3>Namespaces</h3><ul><li><a href="Cli.cli.html">cli</a></li><li><a href="cli.toolkit.html">toolkit</a></li><li><a href="Core.core.html">core</a></li><li><a href="core.model.html">model</a></li><li><a href="core.opendsu.html">opendsu</a></li><li><a href="core.opendsu.api.html">api</a></li><li><a href="core.repository.html">repository</a></li><li><a href="core.repository.cache.html">cache</a></li><li><a href="core.repository.registry.html">registry</a></li><li><a href="core.web.html">web</a></li><li><a href="db-decorators.model.html">model</a></li><li><a href="db-decorators.operations.html">operations</a></li><li><a href="db-decorators.repository.html">repository</a></li><li><a href="db-decorators.utils.html">utils</a></li><li><a href="db-decorators.validation.html">validation</a></li><li><a href="decorator-validation.utils.html">utils</a></li><li><a href="filesystem.constants.html">constants</a></li><li><a href="FileSystem.filesystem.html">filesystem</a></li><li><a href="filesystem.utils.html">utils</a></li><li><a href="logging.html">logging</a></li><li><a href="model.constants.html">constants</a></li><li><a href="Model.Decorators.html">Decorators</a></li><li><a href="model.decorators_.html">decorators</a></li><li><a href="Model.Model.html">Model</a></li><li><a href="operations.decorators.html">decorators</a></li><li><a href="repository.decorators.html">decorators</a></li><li><a href="ts-workspace.Hello.html">Hello</a></li><li><a href="utils.constants.html">constants</a></li><li><a href="utils.errors.html">errors</a></li><li><a href="utils.injectables.html">injectables</a></li><li><a href="utils.logging.html">logging</a></li><li><a href="validation.constants.html">constants</a></li><li><a href="validation.decorators.html">decorators</a></li></ul><h3>Classes</h3><ul><li><a href="core.model.ArrayDSU.html">ArrayDSU</a></li><li><a href="core.model.DbDsuBlueprint.html">DbDsuBlueprint</a></li><li><a href="core.model.DSUModel.html">DSUModel</a></li><li><a href="core.model.DSUModelRegistryImp.html">DSUModelRegistryImp</a></li><li><a href="core.model.SeedDSU.html">SeedDSU</a></li><li><a href="core.model.WalletDSU.html">WalletDSU</a></li><li><a href="core.opendsu.factory.DSUFactoryRegistry.html">DSUFactoryRegistry</a></li><li><a href="core.opendsu.factory.FactoryRegistryImp.html">FactoryRegistryImp</a></li><li><a href="core.opendsu.factory.KeySSIFactoryRegistry.html">KeySSIFactoryRegistry</a></li><li><a href="core.repository.cache.DSUCache.html">DSUCache</a></li><li><a href="core.repository.OpenDSURepository.html">OpenDSURepository</a></li><li><a href="core.repository.registry.DSUOperationRegistry.html">DSUOperationRegistry</a></li><li><a href="core.repository.registry.RepositoryRegistry.html">RepositoryRegistry</a></li><li><a href="core.web.WebServiceImp.html">WebServiceImp</a></li><li><a href="model.decorators.ModelErrorDefinition.html">ModelErrorDefinition</a></li><li><a href="model.Model_.html">Model</a></li><li><a href="Model.ModelRegistryManager.html">ModelRegistryManager</a></li><li><a href="module.exports_module.exports.html">exports</a></li><li><a href="OpenDSURepository_OpenDSURepository.html">OpenDSURepository</a></li><li><a href="SyncronousLock.html">SyncronousLock</a></li><li><a href="validation.ValidatorRegistry.html">ValidatorRegistry</a></li><li><a href="WebServiceImp_WebServiceImp.html">WebServiceImp</a></li></ul><h3>Interfaces</h3><ul><li>BuilderRegistry.&lt;<a href="global.html#T">T</a>></li><li><a href="core.opendsu.api.AnchoringApi.html">AnchoringApi</a></li><li><a href="core.opendsu.api.AuthToken.html">AuthToken</a></li><li><a href="core.opendsu.api.BdnsApi.html">BdnsApi</a></li><li><a href="core.opendsu.api.BrickingApi.html">BrickingApi</a></li><li><a href="core.opendsu.api.CacheApi.html">CacheApi</a></li><li><a href="core.opendsu.api.ConfigApi.html">ConfigApi</a></li><li><a href="core.opendsu.api.constants.ConstantsApi.html">ConstantsApi</a></li><li><a href="core.opendsu.api.constants.EnvironmentTypes.html">EnvironmentTypes</a></li><li><a href="core.opendsu.api.ContractsApi.html">ContractsApi</a></li><li><a href="core.opendsu.api.CrypoApi.html">CrypoApi</a></li><li><a href="core.opendsu.api.crypto.JWT.html">JWT</a></li><li><a href="core.opendsu.api.db.DSUDatabase.html">DSUDatabase</a></li><li><a href="core.opendsu.api.DBApi.html">DBApi</a></li><li><a href="core.opendsu.api.DSUDid.html">DSUDid</a></li><li><a href="core.opendsu.api.DSUEnclave.html">DSUEnclave</a></li><li><a href="core.opendsu.api.DSUObservable.html">DSUObservable</a></li><li><a href="core.opendsu.api.DSUSecurityContext.html">DSUSecurityContext</a></li><li><a href="core.opendsu.api.DSUStorage.html">DSUStorage</a></li><li><a href="core.opendsu.api.enclave.ApiHubSecurityProxy.html">ApiHubSecurityProxy</a></li><li><a href="core.opendsu.api.enclave.HighSecurityProxy.html">HighSecurityProxy</a></li><li><a href="core.opendsu.api.EnclaveApi.html">EnclaveApi</a></li><li><a href="core.opendsu.api.ErrorApi.html">ErrorApi</a></li><li><a href="core.opendsu.api.HttpApi.html">HttpApi</a></li><li><a href="core.opendsu.api.KeySSI.html">KeySSI</a></li><li><a href="core.opendsu.api.keyssi.ArraySSI.html">ArraySSI</a></li><li><a href="core.opendsu.api.keyssi.ConstSSI.html">ConstSSI</a></li><li><a href="core.opendsu.api.keyssi.SeedSSI.html">SeedSSI</a></li><li><a href="core.opendsu.api.keyssi.sReadSSI.html">sReadSSI</a></li><li><a href="core.opendsu.api.keyssi.WalletSSI.html">WalletSSI</a></li><li><a href="core.opendsu.api.KeyssiApi.html">KeyssiApi</a></li><li><a href="core.opendsu.api.m2dsu.ErrMap.html">ErrMap</a></li><li><a href="core.opendsu.api.m2dsu.MessagePipe.html">MessagePipe</a></li><li><a href="core.opendsu.api.M2DsuApi.html">M2DsuApi</a></li><li><a href="core.opendsu.api.MappingEngine.html">MappingEngine</a></li><li><a href="core.opendsu.api.MessageQueueApi.html">MessageQueueApi</a></li><li><a href="core.opendsu.api.NotificationsApi.html">NotificationsApi</a></li><li><a href="core.opendsu.api.oauth.DecodedToken.html">DecodedToken</a></li><li><a href="core.opendsu.api.oauth.OIDC.html">OIDC</a></li><li><a href="core.opendsu.api.OAuthApi.html">OAuthApi</a></li><li><a href="core.opendsu.api.OAuthStorage.html">OAuthStorage</a></li><li><a href="core.opendsu.api.OpenDSUCache.html">OpenDSUCache</a></li><li><a href="core.opendsu.api.OpenDSUUtilsApi.html">OpenDSUUtilsApi</a></li><li><a href="core.opendsu.api.OpenDSUWorkersApi.html">OpenDSUWorkersApi</a></li><li><a href="core.opendsu.api.ResolverApi.html">ResolverApi</a></li><li><a href="core.opendsu.api.SecurityContextApi.html">SecurityContextApi</a></li><li><a href="core.opendsu.api.StorageApi.html">StorageApi</a></li><li><a href="core.opendsu.api.SystemApi.html">SystemApi</a></li><li><a href="core.opendsu.api.w3cdid.CryptographicSkillsApi.html">CryptographicSkillsApi</a></li><li><a href="core.opendsu.api.W3cDIDApi.html">W3cDIDApi</a></li><li><a href="core.opendsu.api.WorkerPool.html">WorkerPool</a></li><li><a href="core.opendsu.DSU.html">DSU</a></li><li><a href="core.opendsu.DSUFactory.html">DSUFactory</a></li><li><a href="core.opendsu.DSUHandler.html">DSUHandler</a></li><li><a href="core.opendsu.OpenDSU.html">OpenDSU</a></li><li><a href="core.opendsu.WalletDsu.html">WalletDsu</a></li><li><a href="core.web.WebService.html">WebService</a></li><li><a href="filesystem.utils.fs.html">fs</a></li><li><a href="filesystem.utils.path.html">path</a></li><li><a href="utils.BuilderRegistry.html">BuilderRegistry</a></li><li><a href="utils.IRegistry.html">IRegistry</a></li><li><a href="validation.IValidatorRegistry.html">IValidatorRegistry</a></li><li><a href="Validation.Validatable.html">Validatable</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildDSU">buildDSU</a></li><li><a href="global.html#construct">construct</a></li><li><a href="global.html#getAllProperties">getAllProperties</a></li><li><a href="global.html#hasErrors">hasErrors</a></li><li><a href="global.html#inject">inject</a></li><li><a href="global.html#prefixMethod">prefixMethod</a></li><li><a href="global.html#prefixMethodAsync">prefixMethodAsync</a></li><li><a href="global.html#suffixMethod">suffixMethod</a></li><li><a href="global.html#suffixMethodAsync">suffixMethodAsync</a></li><li><a href="global.html#updateDSU">updateDSU</a></li><li><a href="global.html#wrapMethod">wrapMethod</a></li><li><a href="global.html#wrapMethodAsync">wrapMethodAsync</a></li></ul></div><div class="category"><h2>Decorators</h2><h3>Global</h3><ul><li><a href="global.html#addFileFS">addFileFS</a></li><li><a href="global.html#addFolderFS">addFolderFS</a></li><li><a href="global.html#date">date</a></li><li><a href="global.html#DSUBlueprint">DSUBlueprint</a></li><li><a href="global.html#dsuFile">dsuFile</a></li><li><a href="global.html#dsuFS">dsuFS</a></li><li><a href="global.html#dsuRepository">dsuRepository</a></li><li><a href="global.html#email">email</a></li><li><a href="global.html#environment">environment</a></li><li><a href="global.html#fromURL">fromURL</a></li><li><a href="global.html#fromWeb">fromWeb</a></li><li><a href="global.html#getFsKey">getFsKey</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#maxlength">maxlength</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minlength">minlength</a></li><li><a href="global.html#model">model</a></li><li><a href="global.html#mount">mount</a></li><li><a href="global.html#pattern">pattern</a></li><li><a href="global.html#required">required</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#url">url</a></li><li><a href="global.html#wallet">wallet</a></li></ul></div><div class="category"><h2>Tests</h2><h3>Classes</h3><ul><li><a href="ArrayDSUModel.html">ArrayDSUModel</a></li><li><a href="BuildDsuBlueprint.html">BuildDsuBlueprint</a></li><li><a href="FSDSUModel.html">FSDSUModel</a></li><li><a href="IdDsuBlueprint.html">IdDsuBlueprint</a></li><li><a href="ParticipantDsuBlueprint.html">ParticipantDsuBlueprint</a></li><li><a href="SeedDSUBlueprint.html">SeedDSUBlueprint</a></li><li><a href="SSAppDsuBlueprint.html">SSAppDsuBlueprint</a></li><li><a href="SSAppWebDsuBlueprint.html">SSAppWebDsuBlueprint</a></li><li><a href="TestIdDsuBlueprint.html">TestIdDsuBlueprint</a></li></ul></div><div class="category"><h2>Validators</h2><h3>Classes</h3><ul><li><a href="DateValidator.html">DateValidator</a></li><li><a href="EmailValidator.html">EmailValidator</a></li><li><a href="MaxLengthValidator.html">MaxLengthValidator</a></li><li><a href="MaxValidator.html">MaxValidator</a></li><li><a href="MinLengthValidator.html">MinLengthValidator</a></li><li><a href="MinValidator.html">MinValidator</a></li><li><a href="PatternValidator.html">PatternValidator</a></li><li><a href="RequiredValidator.html">RequiredValidator</a></li><li><a href="StepValidator.html">StepValidator</a></li><li><a href="URLValidator.html">URLValidator</a></li><li><a href="Validator.html">Validator</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>dsu-blueprint/src/core/web/decorators.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {
+    DSUClassCreationMetadata,
+    DSUCreationMetadata,
+    DSUEditMetadata, dsuFile,
+    DsuKeys,
+    DSUModel,
+    DSUOperationPhase,
+    getDSUModelKey,
+    mount
+} from "../model";
+import {ConstantsApi, DSU, DSUIOOptions, getConstantsApi, getKeySSIApi, getOpenDSU, KeySSI} from "../opendsu";
+import {
+    all,
+    Callback,
+    criticalCallback,
+    DBOperations, debug,
+    Err,
+    ModelCallback,
+    OperationKeys
+} from "@tvenceslau/db-decorators/lib";
+import {
+    DSUCache,
+    DSUPreparationHandler, handleKeyDerivation,
+    OpenDSURepository
+} from "../repository";
+import {getDSUOperationsRegistry} from "../repository/registry";
+import {getWebService} from "./services";
+import {getPropertyDecorators, getValidatorRegistry, ValidationKeys} from "@tvenceslau/decorator-validation/lib";
+import URLValidator from "@tvenceslau/decorator-validation/lib/validation/Validators/URLValidator";
+
+/**
+ * Metadata passed to {@link DSUPreparationHandler}s
+ *
+ * @typedef DSUEditMetadata
+ * @memberOf core.web
+ */
+
+export type DSUPreparationMetadata = {
+    [indexer: string]: any;
+
+    operation: string[]
+    phase: string,
+    prop: string,
+    dsuPath?: string,
+}
+
+/**
+ * Performs a Get request to the supplied url with the supplied options and stores the result in the model under the decorated property
+ *
+ * Acts during the {@link DSUOperationPhase.PREPARATION} phase;
+ *
+ * @param {string} url
+ * @param {boolean} [toJson] defaults to false. if true, tries to parse the result to json
+ * @param {{}} [options] options to be passed to the get request
+ *
+ * @decorator fromURL
+ *
+ * @category Decorators
+ */
+export function fromURL(url: string, toJson: boolean = false, options?: {}){
+    return (target: any, propertyKey: string) => {
+        const metadata: DSUPreparationMetadata = {
+            phase: DSUOperationPhase.PREPARATION,
+            operation: DBOperations.CREATE,
+            prop: propertyKey,
+            url: url,
+            options: options,
+            toJson: toJson
+        }
+
+        Reflect.defineMetadata(
+            getDSUModelKey(DsuKeys.FROM_URL),
+            metadata,
+            target,
+            propertyKey
+        );
+
+        const createHandler: DSUPreparationHandler = function&lt;T extends DSUModel>(this: OpenDSURepository&lt;T>, dsuCache: DSUCache&lt;T>, model: T, decorator: DSUPreparationMetadata, callback: ModelCallback&lt;T>): void {
+            const {prop, url, options, toJson} = decorator;
+
+            const webService = getWebService();
+
+            webService.doGet(url, options, (err: Err, result?: any) => {
+                if (err || !result)
+                    return criticalCallback(err || new Error(`No plausible response received from server`), callback);
+
+                if (toJson)
+                    try {
+                        result = JSON.parse(result);
+                    } catch (e) {
+                        return criticalCallback(e as Error, callback);
+                    }
+
+                // @ts-ignore
+                model[prop] = result;
+                callback(undefined, model as T);
+            });
+        }
+
+        getDSUOperationsRegistry().register(createHandler, OperationKeys.CREATE, DSUOperationPhase.PREPARATION, target, propertyKey);
+
+    }
+}
+
+/**
+ * Depending on whether and url or an app name is supplied:
+ *  - App Name: Communicates with ApiHub to get seeds from SSApps installed in that ApiHub instance:
+ *      - slot 'primary': gets the seed file from the App's 'wallet-patch' folder;
+ *      - slot 'secondary' gets the seed file from the App's {@link ConstantsApi#APP_FOLDER}
+ **
+ * Retrieves the Seed during the {@link DSUOperationPhase.CREATION} operation and {@link DBOperations.CREATE} phases
+ * and stores in the in object under the matching property key
+ *
+ * calls {@link mount} on this property to mount the seed during the {@link DSUOperationPhase.EDITING} operation;
+ *
+ * @param {string} appOrUrl the app name to look for in ApiHub or the URL to an endpoint to call
+ * @param {"primary" | "secondary" | undefined} slot the slot where the seed can be found. 'primary' refers to the 'wallet slot' and secondary to the 'apps slot'. defaults to 'primary' and is mandatory when an App Name is provided. is discarded if a URL is detected in the appName
+ * @param {boolean} [triggerMount] Decides if the DSU retrieved will be mounted or not. defaults to true. all following params require this to be true to be used
+ * @param {boolean| number} [derive] defines how many (if any) times the KeySSI will be Derived before use (only used when {@param triggerMount} is true)
+ * @param {string} [mountPath] defines the mount path. defaults to the property key
+ * @param {DSUIOOptions} [mountOptions] options to be passed to OpenDSU for the mounting operation
+ * @param {string} [keyOverride] and extension tool, to allow wallet decorator to use this one for himself
+ * @param {any[]} [args] Not used in current implementation. Meant for extending decorators
+ *
+ * @decorator fromWeb
+ *
+ * @category Decorators
+ */
+export function fromWeb(appOrUrl: string, slot: "primary" | "secondary" | undefined, triggerMount: boolean = true, derive: boolean | number = false, mountPath?: string, mountOptions?: DSUIOOptions, keyOverride?: string, ...args: any[]) {
+    return (target: any, propertyKey: string) => {
+        mountPath =  mountPath ? mountPath : propertyKey;
+        if (triggerMount)
+            mount(mountPath, false, mountOptions, ...args);
+
+        const name = target.constructor.name;
+        const metadata: DSUPreparationMetadata = {
+            phase: DSUOperationPhase.PREPARATION,
+            operation: DBOperations.CREATE,
+            dsu: name,
+            prop: propertyKey,
+            derive: derive,
+            appName: appOrUrl,
+            slot: slot,
+            args: args
+        }
+
+        Reflect.defineMetadata(
+            getDSUModelKey(keyOverride || DsuKeys.FROM_WEB),
+            metadata,
+            target,
+            propertyKey
+        );
+
+        const createHandler: DSUPreparationHandler = function&lt;T extends DSUModel>(this: OpenDSURepository&lt;T>, dsuCache: DSUCache&lt;T>, model: T, decorator: DSUPreparationMetadata, callback: ModelCallback&lt;T>): void {
+            const {prop, appName, slot, derive} = decorator;
+
+            const webService = getWebService({
+                walletPath: appName
+            });
+
+            const urlValidator = getValidatorRegistry().get(ValidationKeys.URL) as URLValidator || new URLValidator();
+
+            const errs = urlValidator.hasErrors(appName);
+
+            if (!errs &amp;&amp; !slot)
+                return criticalCallback(new Error(`App name supplied with no slot`), callback);
+
+            const method = errs
+                ? (slot === 'secondary' ? (callback: Callback) => webService.getAppSeed.call(webService, appName, callback) : webService.getWalletSeed.bind(webService))
+                : (callback: Callback) => webService.doGet.call(webService, appName, undefined, callback);
+
+            method((err: Err, ssi?: any) => {
+                if (err || !ssi)
+                    return criticalCallback(err || new Error(`Not KeySSI for ${appName} in slot ${slot} found`), callback);
+                ssi = typeof ssi !== 'string' ? ssi.toString() : ssi;
+
+                try {
+                    ssi = getKeySSIApi().parse(ssi) as KeySSI;
+                } catch (e) {
+                    return criticalCallback(e as Error, callback);
+                }
+
+                try {
+                    ssi = handleKeyDerivation(ssi, derive);
+                } catch (e) {
+                    return criticalCallback(e as Error, callback);
+                }
+                // @ts-ignore
+                model[prop] = ssi.getIdentifier();
+                callback(undefined, model as T);
+            });
+        }
+
+        getDSUOperationsRegistry().register(createHandler,  OperationKeys.CREATE, DSUOperationPhase.PREPARATION,target, propertyKey);
+    }
+}
+
+/**
+ * Retrieves the Wallet Seed from ApiHub and stores in the {@link ConstantsApi#CODE_FOLDER} property
+ *
+ * Wrapper decorator around {@link fromWeb(app, "primary", false)}
+ *
+ * @param {string} app the app name to look for in ApiHub
+ * @param {boolean} [derive] If the KeySSI should be derived (how many times). defaults to true
+ *
+ * @decorator wallet
+ *
+ * @category Decorators
+ *
+ * @mermaid
+ *  sequenceDiagram
+ *      wallet->>fromWeb(app, "primary", false)
+ */
+export function wallet(app: string, derive: boolean = true) {
+    return (target: any, propertyKey: string) => {
+        fromWeb(app, "primary", false, derive, undefined, undefined, DsuKeys.WALLET)(target, propertyKey);
+    }
+}
+
+/**
+ * Writes the Environment configuration into a DSU (mandatory for for SSApps)
+ *
+ * The environment file will be saved in json format in the DSU
+ *
+ * @param {string} [fileName] defaults to {@link ConstantsApi.ENVIRONMENT_PATH}
+ *
+ * @decorator environment
+ *
+ * @category Decorators
+ */
+export function environment(fileName: string = "environment.js"){
+    return (target: any, propertyKey: string) => {
+        const name = target.constructor.name;
+        const metadata: DSUPreparationMetadata = {
+            phase: DSUOperationPhase.PREPARATION,
+            operation: DBOperations.CREATE,
+            dsu: name,
+            fileName: fileName,
+            prop: propertyKey,
+        }
+
+        Reflect.defineMetadata(
+            getDSUModelKey(DsuKeys.ENVIRONMENT),
+            metadata,
+            target,
+            propertyKey
+        );
+
+        dsuFile(fileName.replace('json', 'js'))(target, propertyKey);
+
+        const createHandler: DSUPreparationHandler = function&lt;T extends DSUModel>(this: OpenDSURepository&lt;T>, dsuCache: DSUCache&lt;T>, model: T, decorator: DSUPreparationMetadata, callback: ModelCallback&lt;T>): void {
+            const {prop, fileName} = decorator;
+
+            let codeProp = getOpenDSU().constants.CODE_FOLDER;
+            codeProp = codeProp.startsWith('/') ? codeProp.substring(1) : codeProp;
+
+            const decorators: {prop: string | symbol, decorators: any[]} | undefined = getPropertyDecorators(DsuKeys.REFLECT, model, codeProp, true);
+            if (!decorators)
+                return criticalCallback(`Could not find wallet decorator`, callback);
+            const walletDec = decorators.decorators.find(d => d.key === DsuKeys.WALLET);
+            if (!walletDec)
+                return criticalCallback(`Could not find wallet decorator`, callback);
+
+            const appName = walletDec.props.appName;
+
+            const ws = getWebService({
+                walletPath: appName
+            });
+
+            all(`Retrieving Environment definition {0} for App {1}`, getConstantsApi().ENVIRONMENT_PATH, appName);
+            ws.getEnvironmentFile(fileName, (err, env) => {
+                if (err || !env)
+                    return criticalCallback(err || new Error("Missing environment"), callback);
+                debug(`Environment definition for App {0} is {1}`, appName, env);
+
+                // @ts-ignore
+                model[prop] = env;
+                 callback(undefined, model);
+            });
+        }
+
+        getDSUOperationsRegistry().register(createHandler, OperationKeys.CREATE, DSUOperationPhase.PREPARATION, target, propertyKey);
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+</body>
+</html>

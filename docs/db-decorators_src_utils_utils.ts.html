@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenDSU Blueprint Workspace db-decorators/src/utils/utils.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">DSU Blueprint Workspace</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/TiagoVenceslau/dsu-blueprint-workspace.git"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-Cli.html">Cli</a></li><li><a href="module-Core.html">Core</a></li><li><a href="module-db-decorators.html">db-decorators</a></li><li><a href="module-decorator-validation.html">decorator-validation</a></li><li><a href="module-Filesystem.html">Filesystem</a></li><li><a href="module-ts-workspace.html">ts-workspace</a></li></ul><h3>Namespaces</h3><ul><li><a href="Cli.cli.html">cli</a></li><li><a href="cli.toolkit.html">toolkit</a></li><li><a href="Core.core.html">core</a></li><li><a href="core.model.html">model</a></li><li><a href="core.opendsu.html">opendsu</a></li><li><a href="core.opendsu.api.html">api</a></li><li><a href="core.repository.html">repository</a></li><li><a href="core.repository.cache.html">cache</a></li><li><a href="core.repository.registry.html">registry</a></li><li><a href="core.web.html">web</a></li><li><a href="db-decorators.model.html">model</a></li><li><a href="db-decorators.operations.html">operations</a></li><li><a href="db-decorators.repository.html">repository</a></li><li><a href="db-decorators.utils.html">utils</a></li><li><a href="db-decorators.validation.html">validation</a></li><li><a href="decorator-validation.utils.html">utils</a></li><li><a href="filesystem.constants.html">constants</a></li><li><a href="FileSystem.filesystem.html">filesystem</a></li><li><a href="filesystem.utils.html">utils</a></li><li><a href="logging.html">logging</a></li><li><a href="model.constants.html">constants</a></li><li><a href="Model.Decorators.html">Decorators</a></li><li><a href="model.decorators_.html">decorators</a></li><li><a href="Model.Model.html">Model</a></li><li><a href="operations.decorators.html">decorators</a></li><li><a href="repository.decorators.html">decorators</a></li><li><a href="ts-workspace.Hello.html">Hello</a></li><li><a href="utils.constants.html">constants</a></li><li><a href="utils.errors.html">errors</a></li><li><a href="utils.injectables.html">injectables</a></li><li><a href="utils.logging.html">logging</a></li><li><a href="validation.constants.html">constants</a></li><li><a href="validation.decorators.html">decorators</a></li></ul><h3>Classes</h3><ul><li><a href="core.model.ArrayDSU.html">ArrayDSU</a></li><li><a href="core.model.DbDsuBlueprint.html">DbDsuBlueprint</a></li><li><a href="core.model.DSUModel.html">DSUModel</a></li><li><a href="core.model.DSUModelRegistryImp.html">DSUModelRegistryImp</a></li><li><a href="core.model.SeedDSU.html">SeedDSU</a></li><li><a href="core.model.WalletDSU.html">WalletDSU</a></li><li><a href="core.opendsu.factory.DSUFactoryRegistry.html">DSUFactoryRegistry</a></li><li><a href="core.opendsu.factory.FactoryRegistryImp.html">FactoryRegistryImp</a></li><li><a href="core.opendsu.factory.KeySSIFactoryRegistry.html">KeySSIFactoryRegistry</a></li><li><a href="core.repository.cache.DSUCache.html">DSUCache</a></li><li><a href="core.repository.OpenDSURepository.html">OpenDSURepository</a></li><li><a href="core.repository.registry.DSUOperationRegistry.html">DSUOperationRegistry</a></li><li><a href="core.repository.registry.RepositoryRegistry.html">RepositoryRegistry</a></li><li><a href="core.web.WebServiceImp.html">WebServiceImp</a></li><li><a href="model.decorators.ModelErrorDefinition.html">ModelErrorDefinition</a></li><li><a href="model.Model_.html">Model</a></li><li><a href="Model.ModelRegistryManager.html">ModelRegistryManager</a></li><li><a href="module.exports_module.exports.html">exports</a></li><li><a href="OpenDSURepository_OpenDSURepository.html">OpenDSURepository</a></li><li><a href="SyncronousLock.html">SyncronousLock</a></li><li><a href="validation.ValidatorRegistry.html">ValidatorRegistry</a></li><li><a href="WebServiceImp_WebServiceImp.html">WebServiceImp</a></li></ul><h3>Interfaces</h3><ul><li>BuilderRegistry.&lt;<a href="global.html#T">T</a>></li><li><a href="core.opendsu.api.AnchoringApi.html">AnchoringApi</a></li><li><a href="core.opendsu.api.AuthToken.html">AuthToken</a></li><li><a href="core.opendsu.api.BdnsApi.html">BdnsApi</a></li><li><a href="core.opendsu.api.BrickingApi.html">BrickingApi</a></li><li><a href="core.opendsu.api.CacheApi.html">CacheApi</a></li><li><a href="core.opendsu.api.ConfigApi.html">ConfigApi</a></li><li><a href="core.opendsu.api.constants.ConstantsApi.html">ConstantsApi</a></li><li><a href="core.opendsu.api.constants.EnvironmentTypes.html">EnvironmentTypes</a></li><li><a href="core.opendsu.api.ContractsApi.html">ContractsApi</a></li><li><a href="core.opendsu.api.CrypoApi.html">CrypoApi</a></li><li><a href="core.opendsu.api.crypto.JWT.html">JWT</a></li><li><a href="core.opendsu.api.db.DSUDatabase.html">DSUDatabase</a></li><li><a href="core.opendsu.api.DBApi.html">DBApi</a></li><li><a href="core.opendsu.api.DSUDid.html">DSUDid</a></li><li><a href="core.opendsu.api.DSUEnclave.html">DSUEnclave</a></li><li><a href="core.opendsu.api.DSUObservable.html">DSUObservable</a></li><li><a href="core.opendsu.api.DSUSecurityContext.html">DSUSecurityContext</a></li><li><a href="core.opendsu.api.DSUStorage.html">DSUStorage</a></li><li><a href="core.opendsu.api.enclave.ApiHubSecurityProxy.html">ApiHubSecurityProxy</a></li><li><a href="core.opendsu.api.enclave.HighSecurityProxy.html">HighSecurityProxy</a></li><li><a href="core.opendsu.api.EnclaveApi.html">EnclaveApi</a></li><li><a href="core.opendsu.api.ErrorApi.html">ErrorApi</a></li><li><a href="core.opendsu.api.HttpApi.html">HttpApi</a></li><li><a href="core.opendsu.api.KeySSI.html">KeySSI</a></li><li><a href="core.opendsu.api.keyssi.ArraySSI.html">ArraySSI</a></li><li><a href="core.opendsu.api.keyssi.ConstSSI.html">ConstSSI</a></li><li><a href="core.opendsu.api.keyssi.SeedSSI.html">SeedSSI</a></li><li><a href="core.opendsu.api.keyssi.sReadSSI.html">sReadSSI</a></li><li><a href="core.opendsu.api.keyssi.WalletSSI.html">WalletSSI</a></li><li><a href="core.opendsu.api.KeyssiApi.html">KeyssiApi</a></li><li><a href="core.opendsu.api.m2dsu.ErrMap.html">ErrMap</a></li><li><a href="core.opendsu.api.m2dsu.MessagePipe.html">MessagePipe</a></li><li><a href="core.opendsu.api.M2DsuApi.html">M2DsuApi</a></li><li><a href="core.opendsu.api.MappingEngine.html">MappingEngine</a></li><li><a href="core.opendsu.api.MessageQueueApi.html">MessageQueueApi</a></li><li><a href="core.opendsu.api.NotificationsApi.html">NotificationsApi</a></li><li><a href="core.opendsu.api.oauth.DecodedToken.html">DecodedToken</a></li><li><a href="core.opendsu.api.oauth.OIDC.html">OIDC</a></li><li><a href="core.opendsu.api.OAuthApi.html">OAuthApi</a></li><li><a href="core.opendsu.api.OAuthStorage.html">OAuthStorage</a></li><li><a href="core.opendsu.api.OpenDSUCache.html">OpenDSUCache</a></li><li><a href="core.opendsu.api.OpenDSUUtilsApi.html">OpenDSUUtilsApi</a></li><li><a href="core.opendsu.api.OpenDSUWorkersApi.html">OpenDSUWorkersApi</a></li><li><a href="core.opendsu.api.ResolverApi.html">ResolverApi</a></li><li><a href="core.opendsu.api.SecurityContextApi.html">SecurityContextApi</a></li><li><a href="core.opendsu.api.StorageApi.html">StorageApi</a></li><li><a href="core.opendsu.api.SystemApi.html">SystemApi</a></li><li><a href="core.opendsu.api.w3cdid.CryptographicSkillsApi.html">CryptographicSkillsApi</a></li><li><a href="core.opendsu.api.W3cDIDApi.html">W3cDIDApi</a></li><li><a href="core.opendsu.api.WorkerPool.html">WorkerPool</a></li><li><a href="core.opendsu.DSU.html">DSU</a></li><li><a href="core.opendsu.DSUFactory.html">DSUFactory</a></li><li><a href="core.opendsu.DSUHandler.html">DSUHandler</a></li><li><a href="core.opendsu.OpenDSU.html">OpenDSU</a></li><li><a href="core.opendsu.WalletDsu.html">WalletDsu</a></li><li><a href="core.web.WebService.html">WebService</a></li><li><a href="filesystem.utils.fs.html">fs</a></li><li><a href="filesystem.utils.path.html">path</a></li><li><a href="utils.BuilderRegistry.html">BuilderRegistry</a></li><li><a href="utils.IRegistry.html">IRegistry</a></li><li><a href="validation.IValidatorRegistry.html">IValidatorRegistry</a></li><li><a href="Validation.Validatable.html">Validatable</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildDSU">buildDSU</a></li><li><a href="global.html#construct">construct</a></li><li><a href="global.html#getAllProperties">getAllProperties</a></li><li><a href="global.html#hasErrors">hasErrors</a></li><li><a href="global.html#inject">inject</a></li><li><a href="global.html#prefixMethod">prefixMethod</a></li><li><a href="global.html#prefixMethodAsync">prefixMethodAsync</a></li><li><a href="global.html#suffixMethod">suffixMethod</a></li><li><a href="global.html#suffixMethodAsync">suffixMethodAsync</a></li><li><a href="global.html#updateDSU">updateDSU</a></li><li><a href="global.html#wrapMethod">wrapMethod</a></li><li><a href="global.html#wrapMethodAsync">wrapMethodAsync</a></li></ul></div><div class="category"><h2>Decorators</h2><h3>Global</h3><ul><li><a href="global.html#addFileFS">addFileFS</a></li><li><a href="global.html#addFolderFS">addFolderFS</a></li><li><a href="global.html#date">date</a></li><li><a href="global.html#DSUBlueprint">DSUBlueprint</a></li><li><a href="global.html#dsuFile">dsuFile</a></li><li><a href="global.html#dsuFS">dsuFS</a></li><li><a href="global.html#dsuRepository">dsuRepository</a></li><li><a href="global.html#email">email</a></li><li><a href="global.html#environment">environment</a></li><li><a href="global.html#fromURL">fromURL</a></li><li><a href="global.html#fromWeb">fromWeb</a></li><li><a href="global.html#getFsKey">getFsKey</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#maxlength">maxlength</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minlength">minlength</a></li><li><a href="global.html#model">model</a></li><li><a href="global.html#mount">mount</a></li><li><a href="global.html#pattern">pattern</a></li><li><a href="global.html#required">required</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#url">url</a></li><li><a href="global.html#wallet">wallet</a></li></ul></div><div class="category"><h2>Tests</h2><h3>Classes</h3><ul><li><a href="ArrayDSUModel.html">ArrayDSUModel</a></li><li><a href="BuildDsuBlueprint.html">BuildDsuBlueprint</a></li><li><a href="FSDSUModel.html">FSDSUModel</a></li><li><a href="IdDsuBlueprint.html">IdDsuBlueprint</a></li><li><a href="ParticipantDsuBlueprint.html">ParticipantDsuBlueprint</a></li><li><a href="SeedDSUBlueprint.html">SeedDSUBlueprint</a></li><li><a href="SSAppDsuBlueprint.html">SSAppDsuBlueprint</a></li><li><a href="SSAppWebDsuBlueprint.html">SSAppWebDsuBlueprint</a></li><li><a href="TestIdDsuBlueprint.html">TestIdDsuBlueprint</a></li></ul></div><div class="category"><h2>Validators</h2><h3>Classes</h3><ul><li><a href="DateValidator.html">DateValidator</a></li><li><a href="EmailValidator.html">EmailValidator</a></li><li><a href="MaxLengthValidator.html">MaxLengthValidator</a></li><li><a href="MaxValidator.html">MaxValidator</a></li><li><a href="MinLengthValidator.html">MinLengthValidator</a></li><li><a href="MinValidator.html">MinValidator</a></li><li><a href="PatternValidator.html">PatternValidator</a></li><li><a href="RequiredValidator.html">RequiredValidator</a></li><li><a href="StepValidator.html">StepValidator</a></li><li><a href="URLValidator.html">URLValidator</a></li><li><a href="Validator.html">Validator</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>db-decorators/src/utils/utils.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {
+    constructFromObject as constrObj,
+    construct as superConstruct, getPropertyDecorators, ModelKeys
+} from "@tvenceslau/decorator-validation/lib";
+export {getClassDecorators, stringFormat, formatDate} from "@tvenceslau/decorator-validation/lib";
+
+import DBModel from "../model/DBModel";
+import {AsyncRepository, Callback, Err, ModelCallback, Repository} from "../repository";
+import {OperationHandlerAsync, OperationKeys} from "../operations";
+import {getOperationsRegistry} from "../operations/registry";
+import {errorCallback, LoggedError} from "../errors";
+
+/**
+ * Helper Function to override constructors
+ * @param {Function} constructor
+ * @param {any[]} args
+ * @return {T} the new instance
+ */
+export function construct&lt;T extends DBModel>(constructor: any, ...args: any[]) {
+    return superConstruct&lt;T>(constructor, ...args);
+}
+
+export function constructFromObject&lt;T extends DBModel>(self: T, obj?: T | {}){
+    return constrObj&lt;T>(self, obj);
+}
+
+/**
+ * Util method to change a method of an object prefixing it with another
+ * @param {any} obj The Base Object
+ * @param {Function} after The original method
+ * @param {Function} prefix The Prefix method. The output will be used as arguments in the original method
+ * @param {string} [afterName] When the after function anme cannot be extracted, pass it here
+ */
+export function prefixMethod(obj: any, after: Function, prefix: Function, afterName?: string){
+    function wrapper(this: any, ...args: any[]){
+        const results = prefix.call(this, ...args);
+        return after.call(this, ...results);
+    }
+    obj[afterName ? afterName : after.name] = wrapper.bind(obj);
+}
+
+/**
+ * Util method to change a method of an object suffixing it with another
+ * @param {any} obj The Base Object
+ * @param {Function} before The original method
+ * @param {Function} suffix The Prefix method. The output will be used as arguments in the original method
+ * @param {string} [beforeName] When the after function anme cannot be extracted, pass it here
+ */
+export function suffixMethod(obj: any, before: Function, suffix: Function, beforeName?: string){
+    function wrapper(this: any, ...args: any[]){
+        const results = before.call(this, ...args);
+        return suffix.call(this, ...results);
+    }
+    obj[beforeName ? beforeName : before.name] = wrapper.bind(obj);
+}
+
+/**
+ * Util method to wrap a method of an object with additional logic
+ *
+ * @param {any} obj The Base Object
+ * @param {Function} before the method to be prefixed
+ * @param {Function} method the method to be wrapped
+ * @param {Function} after The method to be suffixed
+ * @param {string} [methodName] When the after function anme cannot be extracted, pass it here
+ */
+export function wrapMethod(obj: any, before: Function, method: Function, after: Function, methodName?: string){
+    function wrapper(this: any, ...args: any[]){
+        const transformedArgs = before.call(obj, ...args);
+        const results = method.call(obj, ...transformedArgs);
+        return after.call(this, ...results);
+    }
+    obj[methodName ? methodName : before.name] = wrapper.bind(obj);
+}
+
+/**
+ * The Async version of {@link prefixMethod}
+ *
+ * @param {any} obj The Base Object
+ * @param {Function} after The original method
+ * @param {Function} prefix The Prefix method. The output will be used as arguments in the original method
+ * @param {string} [afterName] When the after function name cannot be extracted, pass it here
+ */
+export function prefixMethodAsync(obj: any, after: Function, prefix: Function, afterName?: string){
+    function wrapperPrefix(...args: any[]){
+        const callback: Callback = args.pop();
+        return prefix.call(obj, ...args, (err: Err, ...results: any[]) => {
+            if (err)
+                return callback(err);
+            after.call(obj, ...results, callback);
+        });
+    }
+    obj[afterName ? afterName : after.name] = wrapperPrefix;
+}
+
+/**
+ * The Async version of {@link suffixMethod}
+ *
+ * @param {any} obj The Base Object
+ * @param {Function} before The original method
+ * @param {Function} suffix The Prefix method. The output will be used as arguments in the original method
+ * @param {string} [beforeName] When the after function name cannot be extracted, pass it here
+ */
+export function suffixMethodAsync(obj: any, before: Function, suffix: Function, beforeName?: string){
+    function wrapperSuffix(this: any, ...args: any[]){
+        const callback: Callback = args.pop();
+        return before.call(this, ...args, (err: Err, ...results: any[]) => {
+            if (err)
+                return callback(err);
+            suffix.call(this, ...results, callback);
+        });
+    }
+    obj[beforeName ? beforeName : before.name] = wrapperSuffix.bind(obj);
+}
+
+/**
+ * The Async version of {@link wrapMethod}
+ *
+ * @param {any} obj The Base Object
+ * @param {Function} before the method to be prefixed
+ * @param {Function} method the method to be wrapped
+ * @param {Function} after The method to be suffixed
+ * @param {string} [methodName] When the after function name cannot be extracted, pass it here
+ */
+export function wrapMethodAsync(obj: any, before: Function, method: Function, after: Function, methodName?: string){
+    function wrapper(this: any, ...args: any[]){
+        const callback: Callback = args.pop();
+        return before.call(obj, ...args, (err: Err, ...transformedArgs: any[]) => {
+            if (err)
+                return callback(err);
+            method.call(obj, ...transformedArgs, (err: Err, ...results: any[]) => {
+                if (err)
+                    return callback(err);
+                after.call(obj, ...results, (err: Err, ...otherResults: any[]) => {
+                    if (err)
+                        return callback(err);
+                    callback(undefined, ...otherResults);
+                });
+            });
+        });
+    }
+
+    obj[methodName ? methodName : method.name] = wrapper.bind(obj);
+}
+
+export const getAllPropertyDecorators = function&lt;T extends DBModel>(model: T , ...prefixes: string[]): {[indexer: string]: any[]} | undefined {
+    if (!prefixes || !prefixes.length)
+        return;
+
+    const pushOrCreate = function(accum: {[indexer: string]: {[indexer: string]: any}}, key: string, decorators: any[]){
+        if (!decorators || !decorators.length)
+            return;
+        if (!accum[key])
+            accum[key] = [];
+        accum[key].push(...decorators);
+    }
+
+    return Object.keys(model).reduce((accum: {} | undefined, propKey) => {
+        prefixes.forEach((p, index) => {
+            const decorators: {prop: string | symbol, decorators: any[]} = getPropertyDecorators(p, model, propKey, index !== 0);
+            if (!accum)
+                accum = {};
+            pushOrCreate(accum, propKey, decorators.decorators);
+        });
+        return accum;
+    }, undefined);
+}
+
+export const getDbDecorators = function&lt;T extends DBModel>(model: T, operation: string, extraPrefix?: string): {[indexer: string]: {[indexer: string]: any[]}} | undefined {
+    const decorators = getAllPropertyDecorators(model, OperationKeys.REFLECT + (extraPrefix ? extraPrefix : ''));
+    if (!decorators)
+        return;
+    return Object.keys(decorators).reduce((accum: {[indexer: string]: any} | undefined, decorator) => {
+        const dec = decorators[decorator].filter(d => d.key === operation);
+        if (dec &amp;&amp; dec.length){
+            if (!accum)
+                accum = {};
+            accum[decorator] = dec;
+        }
+        return accum;
+    }, undefined);
+}
+
+export const enforceDBDecorators = function&lt;T extends DBModel>(repo: Repository&lt;T>, model: T, decorators: {[indexer: string]: {[indexer:string]: any[]}}): T {
+    Object.keys(decorators).forEach(prop => {
+        // @ts-ignore
+        const decs: any[] = decorators[prop];
+        const handler: Function | undefined = getOperationsRegistry().get(model.constructor.name, prop, decs[0].key);
+        if (!handler)
+            throw new LoggedError(`Could not find registered handler for the operation ${prop}`);
+        handler.call(repo, model, ...decs[0].props.args, ...decs[0].props.props);
+    });
+
+    return model;
+}
+
+export const enforceDBDecoratorsAsync = function&lt;T extends DBModel>(repo: AsyncRepository&lt;T>, model: T, decorators: {[indexer: string]: {[indexer:string]: any[]}}, keyPrefix: string = "", callback: ModelCallback&lt;T>){
+
+    const propIterator = function(props: string[], callback: ModelCallback&lt;T>){
+        const prop = props.shift();
+        if (!prop)
+            return callback(undefined, model);
+        // @ts-ignore
+        const decs: any[] = decorators[prop];
+        const handler: OperationHandlerAsync&lt;T> | undefined = getOperationsRegistry().get(model.constructor.name, prop, keyPrefix + decs[0].key);
+        if (!handler)
+            return errorCallback(new Error(`Could not find registered handler for the operation ${prop}`), callback);
+        handler.call(repo, model, ...decs[0].props.args, ...decs[0].props.props, (err: Err) => {
+            if (err)
+                return callback(err);
+            propIterator(props, callback);
+        });
+    }
+
+    propIterator(Object.keys(decorators), (err: Err, model?: T) => {
+        if (err)
+            return callback(err);
+        callback(undefined, model);
+    });
+}
+
+/**
+ * Retrieves all properties of an object:
+ *  - and of all its prototypes if {@param climbTree} until it reaches {@param stopAt} (or ends the prototype chain)
+ *
+ * @param obj
+ * @param {boolean} [climbTree] default to true
+ * @param {string} [stopAt] defaults to 'Object'
+ */
+export function getAllProperties(obj: {}, climbTree = true, stopAt = 'Object'){
+    const allProps: string[] = [];
+    let curr: {} = obj
+
+    const keepAtIt = function(){
+        if (!climbTree)
+            return;
+        let prototype = Object.getPrototypeOf(curr);
+        if (!prototype || prototype.constructor.name === stopAt)
+            return;
+        curr = prototype;
+        return curr;
+    }
+
+    do{
+        let props = Object.getOwnPropertyNames(curr)
+        props.forEach(function(prop){
+            if (allProps.indexOf(prop) === -1)
+                allProps.push(prop)
+        })
+    } while(keepAtIt())
+    return allProps
+}
+
+export function getTypeFromDecorator(model: any, propKey: string | symbol): string | undefined {
+    const decorators: {prop: string | symbol, decorators: any[]} = getPropertyDecorators(ModelKeys.REFLECT, model, propKey, false);
+    if (!decorators || !decorators.decorators)
+        return;
+
+    // TODO handle @type decorators. for now we stick with design:type
+    const typeDecorator = decorators.decorators.shift();
+    const name = typeDecorator.props ? typeDecorator.props.name : undefined;
+    return name !== "Function" ? name : undefined;
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+</body>
+</html>

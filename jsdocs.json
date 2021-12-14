@@ -1,0 +1,110 @@
+{
+    "plugins": [
+        "plugins/markdown",
+        "plugins/summarize",
+        "node_modules/jsdoc-mermaid",
+        "node_modules/better-docs/typescript",
+        "node_modules/better-docs/category"
+    ],
+    "package": "package.json",
+    "recurseDepth": 10,
+    "source": {
+        "include": [
+            "."
+        ],
+        "exclude": [
+            "./node_modules",
+            "./cardinal",
+            "./webcardinal",
+            "./themes",
+            "./privatesky",
+            "./docs",
+            "./workdocs",
+            "./bin",
+            "./tests",
+            "./trust-loader-config",
+            "./dossier-explorer-ssapp",
+            "dossier-explorer-wallet-prototype",
+            "apihub-root"
+        ],
+        "includePattern": "\\.(ts|tsx)$",
+        "excludePattern": ".*/node_modules/.*"
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "ink-docstrap": {
+            "systemName"            : "DSU Blueprint Workspace",
+            "footer"                : "Tiago Venceslau",
+            "copyright"             :  "MIT Licence",
+            "includeDate"           : "true",
+            "navType"               : "inline",
+            "theme"                 : "yeti",
+            "linenums"              : "true",
+            "collapseSymbols"       : "false",
+            "inverseNav"            : "true",
+            "outputSourceFiles"     : "true" ,
+            "outputSourcePath"      : "false",
+            "dateFormat"            : "dddd, MMMM Do YYYY, h:mm:ss a",
+            "syntaxTheme"           : "default",
+            "sort"                  : "true",
+            "search"                : "true"
+        },
+        "docdash": {
+            "static": true,
+            "sort": true,
+            "sectionOrder": [
+                "Namespaces",
+                "Classes",
+                "Modules",
+                "Externals",
+                "Events",
+                "Mixins",
+                "Tutorials",
+                "Interfaces"
+            ],
+            "search": true,
+            "collapse": true,
+            "wrap": false,
+            "typedefs": true,
+            "navLevel": -1,
+            "private": true,
+            "removeQuotes": "none",
+            "scripts": [],
+            "menu": {
+                "Project Website": {
+                    "href":"https://tiagovenceslau.github.io/dsu-blueprint-workspace",
+                    "target":"_blank",
+                    "class":"menu-item",
+                    "id":"website_link"
+                }
+            },
+            "nameInOutputPath": true,
+            "versionInOutputPath": true
+        },
+        "better-docs": {
+            "name": "DSU Blueprint Workspace",
+            "title": "OpenDSU Blueprint Workspace",
+            "hideGenerator": true,
+            "navLinks": [
+                {
+                    "label": "Github",
+                    "href": "https://github.com/TiagoVenceslau/dsu-blueprint-workspace.git"
+                }
+            ]
+        },
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "search": true
+    },
+    "opts": {
+        "encoding": "utf-8",
+        "template": "./node_modules/better-docs",
+        "destination": "./docs/",
+        "readme": "./README.md",
+        "recurse": true,
+        "verbose": true
+    }
+}

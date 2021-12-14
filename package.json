@@ -2,8 +2,7 @@
   "name": "dsu-blueprint-workspace",
   "version": "0.0.1",
   "description": "Decorator based approach to OpenDSU",
-  "main": "./dist/index.min.js",
-  "module": "./dist/esm/index.min.esm.js",
+  "main": "./index.js",
   "scripts": {
     "dev-install": "node ./bin/mkDevEnv.js && npm install",
     "postinstall": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"npm run do-install\"",
@@ -32,7 +31,7 @@
     "release": "./bin/tag-release.sh",
     "clean-publish": "npx clean-publish",
     "coverage-old": "npm test && npm install jest-coverage-badges && jest-coverage-badges --input \"./workdocs/coverage/coverage-summary.json\" --output \"./workdocs/badges\" && npm uninstall jest-coverage-badges",
-    "docs": "npm run coverage && npx rimraf ./docs/* && cp -r ./workdocs/assets ./docs/assets && npm install better-docs taffydb && npx markdown-include ./mdCompile.json && npx jsdoc -c jsdocs.json -t ./node_modules/better-docs && cd docs && ./../workdocs/bin/correct_windows_names.sh . && cd .. && npm remove better-docs taffydb"
+    "docs": "npx rimraf ./docs/* && cp -r ./workdocs/assets ./docs/assets && npm install better-docs taffydb && npx markdown-include ./mdCompile.json && npx jsdoc -c jsdocs.json -t ./node_modules/better-docs && cd .. && npm remove better-docs taffydb"
   },
   "repository": {
     "type": "git",
@@ -53,7 +52,19 @@
   },
   "homepage": "https://github.com/TiagoVenceslau/dsu-blueprint-workspace#readme",
   "devDependencies": {
-    "octopus": "git+https://github.com/PrivateSky/octopus.git"
+    "octopus": "git+https://github.com/PrivateSky/octopus.git",
+    "form-data": "^4.0.0",
+    "markdown-include": "^0.4.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5",
+    "rimraf": "^3.0.2",
+    "jsdoc": "^3.6.7",
+    "jsdoc-mermaid": "^1.0.0",
+    "jsdoc-to-markdown": "^7.1.0",
+    "@types/node": "^16.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "better-docs": "^2.3.2",
+    "taffydb": "^2.7.3"
+  }
 }
