@@ -16,6 +16,9 @@ export default class BuildDsuBlueprint extends DSUModel{
     @dsuFS("../themes/*", true)
     themes?: any[] = undefined;
 
+    @addFileFS("./build/init.js", "blueprint.js")
+    blueprint?: any;
+
     constructor(blueprint?: BuildDsuBlueprint | {}) {
         super();
         constructFromObject<BuildDsuBlueprint>(this, blueprint);

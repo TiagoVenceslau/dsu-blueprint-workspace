@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.16.4",
     "@tvenceslau/db-decorators": "0.1.3",
     "@tvenceslau/decorator-validation": "1.7.3",
-    "@tvenceslau/dsu-blueprint": "0.0.14",
+    "@tvenceslau/dsu-blueprint": "0.1.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.0.1",
     "jest": "^27.0.6",
