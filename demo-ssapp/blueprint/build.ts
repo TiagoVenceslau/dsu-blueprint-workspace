@@ -1,5 +1,5 @@
-import {constructFromObject} from "@tvenceslau/db-decorators/lib";
 import {DSUBlueprint, DSUModel, addFileFS, dsuFS, addFolderFS} from '@tvenceslau/dsu-blueprint/lib';
+import {constructFromObject} from "@tvenceslau/decorator-validation/lib";
 
 @DSUBlueprint(undefined)
 export default class BuildDsuBlueprint extends DSUModel{

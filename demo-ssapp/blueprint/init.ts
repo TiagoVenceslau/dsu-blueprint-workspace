@@ -1,5 +1,4 @@
-import {constructFromObject} from "@tvenceslau/db-decorators/lib";
-import {email} from "@tvenceslau/decorator-validation/lib";
+import {constructFromObject, email} from "@tvenceslau/decorator-validation/lib";
 import {KeySSIType, dsu, DSUBlueprint, dsuFile, DSUModel, DbDsuBlueprint, dsuFS, fromCache} from '@tvenceslau/dsu-blueprint/lib';
 
 @DSUBlueprint(undefined, KeySSIType.SEED)
