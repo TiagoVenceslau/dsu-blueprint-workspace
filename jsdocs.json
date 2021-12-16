@@ -6,7 +6,7 @@
         "node_modules/better-docs/typescript",
         "node_modules/better-docs/category"
     ],
-    "package": "package.json",
+    "package": "./package.json",
     "recurseDepth": 10,
     "source": {
         "include": [
