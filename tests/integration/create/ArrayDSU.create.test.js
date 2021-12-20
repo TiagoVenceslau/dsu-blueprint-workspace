@@ -1,4 +1,4 @@
-const dsuBlueprint = require('../../../dsu-blueprint/lib');
+cconst dsuBlueprint = require('../../../dsu-blueprint/lib');
 
 const {ArrayDSU, KeySSIType, OpenDSURepository} = dsuBlueprint;
 

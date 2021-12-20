@@ -31,7 +31,8 @@
     "release": "./bin/tag-release.sh",
     "clean-publish": "npx clean-publish",
     "coverage-old": "npm test && npm install jest-coverage-badges && jest-coverage-badges --input \"./workdocs/coverage/coverage-summary.json\" --output \"./workdocs/badges\" && npm uninstall jest-coverage-badges",
-    "docs": "npx rimraf ./docs/* && cp -r ./workdocs/assets ./docs/assets && npm install better-docs taffydb && npx markdown-include ./mdCompile.json && npx jsdoc -c jsdocs.json -t ./node_modules/better-docs && cd .. && npm remove better-docs taffydb"
+    "docs": "npx rimraf ./docs/* && cp -r ./workdocs/assets ./docs/assets && npm install better-docs taffydb && npx markdown-include ./mdCompile.json && npx jsdoc -c jsdocs.json -t ./node_modules/better-docs && cd .. && npm remove better-docs taffydb",
+    "patch-dsu-explorer": "node ./node_modules/octopus/scripts/run patch-dsu-explorer"
   },
   "repository": {
     "type": "git",

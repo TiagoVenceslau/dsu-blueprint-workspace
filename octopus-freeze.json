@@ -383,6 +383,57 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "generate-service-workers",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/dsu-explorer/loader && npx workbox generateSW"
+                }
+            ]
+        }
+    ],
+    "patch-dsu-explorer": [
+        {
+            "name": "Replace DSU explorer Loader",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "rimraf apihub-root/dsu-explorer/loader"
+                },
+                {
+                    "type": "copy",
+                    "src": "trust-loader/loader",
+                    "target": "apihub-root/dsu-explorer/loader",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "trust-loader-config",
+            "actions": [
+                {
+                    "type": "copy",
+                    "src": "./trust-loader-config/dsu-explorer",
+                    "target": "./apihub-root/dsu-explorer",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "generate-service-workers",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/dsu-explorer/loader && npx workbox generateSW"
+                }
+            ]
         }
     ]
 }
