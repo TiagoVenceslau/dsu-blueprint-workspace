@@ -27,10 +27,7 @@
 /demo-ssapp/seed
 /demo-ssapp/build
 
-/trust-loader/lib
-/trust-loader/dist
-/trust-loader/loader/bundles
-/trust-loader/node_modules
+/trust-loader
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm+all,vim,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all,vim,node

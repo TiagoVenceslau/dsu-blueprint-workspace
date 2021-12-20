@@ -283,6 +283,21 @@
       ]
     },
     {
+      "name": "trust-loader",
+      "src": "git@github.com:TiagoVenceslau/trust-loader.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": ".",
+          "collectLog": false
+        },
+        {
+          "type": "execute",
+          "cmd": "cd trust-loader && npm install"
+        }
+      ]
+    },
+    {
       "name": "demo-ssapp",
       "src": ".",
       "actions": [
@@ -355,6 +370,16 @@
       ]
     },
     {
+      "name": "build trust-loader",
+      "src": ".",
+      "actions": [
+        {
+          "type": "execute",
+          "cmd": "cd trust-loader && npm run build:loader"
+        }
+      ]
+    },
+    {
       "name": "build demo-ssapp",
       "src": ".",
       "actions": [
@@ -364,7 +389,6 @@
         }
       ]
     },
-
     {
       "name": "trust-loader-config",
       "actions": [
