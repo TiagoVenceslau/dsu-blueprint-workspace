@@ -2,7 +2,7 @@
   "default": {
     "replicas": [],
     "brickStorages": [
-      "$ORIGIN"
+      "google.pt/asfds"
     ],
     "anchoringServices": [
       "$ORIGIN"

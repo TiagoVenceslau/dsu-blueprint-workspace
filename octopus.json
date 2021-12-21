@@ -380,7 +380,7 @@
       "actions": [
         {
           "type": "execute",
-          "cmd": "cd dsu-blueprint && npm run build"
+          "cmd": "cd dsu-blueprint && npm run build:prod"
         }
       ]
     },
