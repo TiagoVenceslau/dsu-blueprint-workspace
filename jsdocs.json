@@ -24,10 +24,11 @@
             "./tests",
             "./trust-loader-config",
             "./dossier-explorer-ssapp",
+            "./ui-decorators-web/www",
             "dossier-explorer-wallet-prototype",
             "apihub-root"
         ],
-        "includePattern": "\\.(ts|tsx)$",
+        "includePattern": "[^\\.d]\\.(ts|tsx)$",
         "excludePattern": ".*/node_modules/.*"
     },
     "tags": {
