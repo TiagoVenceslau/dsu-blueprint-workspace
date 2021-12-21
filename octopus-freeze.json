@@ -290,6 +290,36 @@
             ]
         },
         {
+            "name": "trust-loader",
+            "src": "git@github.com:TiagoVenceslau/trust-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd trust-loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "blueprint-loader",
+            "src": "git@github.com:TiagoVenceslau/blueprint-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd blueprint-loader && npm install"
+                }
+            ]
+        },
+        {
             "name": "demo-ssapp",
             "src": ".",
             "actions": [
@@ -362,6 +392,26 @@
             ]
         },
         {
+            "name": "build trust-loader",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd trust-loader && npm run build:loader"
+                }
+            ]
+        },
+        {
+            "name": "build blueprint-loader",
+            "src": ".",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd blueprint-loader && npm run build:loader"
+                }
+            ]
+        },
+        {
             "name": "build demo-ssapp",
             "src": ".",
             "actions": [
@@ -394,7 +444,7 @@
             ]
         }
     ],
-    "patch-dsu-explorer": [
+    "patch-dsu-explorer-loader": [
         {
             "name": "Replace DSU explorer Loader",
             "src": ".",
