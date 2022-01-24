@@ -62,10 +62,10 @@
     "jsdoc": "^3.6.7",
     "jsdoc-mermaid": "^1.0.0",
     "jsdoc-to-markdown": "^7.1.0",
-    "@types/node": "^16.0.1"
-  },
-  "dependencies": {
+    "@types/node": "^16.0.1",
     "better-docs": "^2.3.2",
     "taffydb": "^2.7.3"
+  },
+  "dependencies": {
   }
 }
